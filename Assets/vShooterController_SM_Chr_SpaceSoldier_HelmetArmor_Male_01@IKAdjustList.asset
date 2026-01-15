@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb2afe458380a5a4aafc1781a445552d, type: 3}
+  m_Name: vShooterController_SM_Chr_SpaceSoldier_HelmetArmor_Male_01@IKAdjustList
+  m_EditorClassIdentifier: 
+  ikTargetPositionOffsetR: {x: 0, y: 0, z: 0}
+  ikTargetRotationOffsetR: {x: 0, y: 0, z: 0}
+  ikTargetPositionOffsetL: {x: 0, y: 0, z: 0}
+  ikTargetRotationOffsetL: {x: 0, y: 0, z: 0}
+  weaponIKAdjusts:
+  - {fileID: 11400000, guid: 2b661f467d998d846a6fad151b686975, type: 2}
+  - {fileID: 11400000, guid: 4b5e141d4a97ea34aafc02e6beca3932, type: 2}
+  - {fileID: 11400000, guid: 10d789b6cd93976408e3ad33b04dfdff, type: 2}
