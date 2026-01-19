@@ -20,7 +20,8 @@ MonoBehaviour:
   createNewItem: 0
   maxStack: 1
   amount: 0
-  originalObject: {fileID: 4858134016180550643, guid: 2cb548e5781e140459d7adfc863bbc28, type: 3}
+  originalObject: {fileID: 4858134016180550643, guid: 2cb548e5781e140459d7adfc863bbc28,
+    type: 3}
   dropObject: {fileID: 120964, guid: d514a70d9dfd1ec459bbec7c9799555a, type: 3}
   attributes:
   - name: 2
@@ -96,7 +97,8 @@ MonoBehaviour:
   createNewItem: 0
   maxStack: 1
   amount: 0
-  originalObject: {fileID: 4030899377270484251, guid: df91443142134494c8c27145320af753, type: 3}
+  originalObject: {fileID: 4030899377270484251, guid: df91443142134494c8c27145320af753,
+    type: 3}
   dropObject: {fileID: 170868, guid: 29c64441cf150e1478de24e3252446ec, type: 3}
   attributes:
   - name: 2
@@ -143,7 +145,8 @@ MonoBehaviour:
   createNewItem: 0
   maxStack: 1
   amount: 0
-  originalObject: {fileID: 7765915949596586872, guid: 5f4637c21aec9fe4ab55825d3ea16e1d, type: 3}
+  originalObject: {fileID: 7765915949596586872, guid: 5f4637c21aec9fe4ab55825d3ea16e1d,
+    type: 3}
   dropObject: {fileID: 121418, guid: 763836da888842349a25cd7daf28a752, type: 3}
   attributes:
   - name: 2
@@ -190,7 +193,8 @@ MonoBehaviour:
   createNewItem: 0
   maxStack: 1
   amount: 0
-  originalObject: {fileID: 3983642317845516190, guid: c364da18cdf33644192fe9cb638376d2, type: 3}
+  originalObject: {fileID: 3983642317845516190, guid: c364da18cdf33644192fe9cb638376d2,
+    type: 3}
   dropObject: {fileID: 120964, guid: d514a70d9dfd1ec459bbec7c9799555a, type: 3}
   attributes:
   - name: 2
@@ -245,7 +249,8 @@ MonoBehaviour:
   createNewItem: 0
   maxStack: 1
   amount: 0
-  originalObject: {fileID: 2778958385151388456, guid: 016d5718607df71478b3817e1c4c3d1c, type: 3}
+  originalObject: {fileID: 2778958385151388456, guid: 016d5718607df71478b3817e1c4c3d1c,
+    type: 3}
   dropObject: {fileID: 199660, guid: 38ebe90b46d37bd47822899bd47a318a, type: 3}
   attributes:
   - name: 2
@@ -292,7 +297,8 @@ MonoBehaviour:
   createNewItem: 0
   maxStack: 1
   amount: 0
-  originalObject: {fileID: 8179195202024506669, guid: bd18d87e67532d74eb24b1f0f1aad10d, type: 3}
+  originalObject: {fileID: 8179195202024506669, guid: bd18d87e67532d74eb24b1f0f1aad10d,
+    type: 3}
   dropObject: {fileID: 120964, guid: d514a70d9dfd1ec459bbec7c9799555a, type: 3}
   attributes:
   - name: 2

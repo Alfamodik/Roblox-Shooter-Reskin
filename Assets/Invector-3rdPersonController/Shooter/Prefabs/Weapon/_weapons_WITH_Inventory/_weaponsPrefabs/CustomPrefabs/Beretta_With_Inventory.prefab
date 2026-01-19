@@ -9863,8 +9863,8 @@ Transform:
   m_GameObject: {fileID: 2778958385151388456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.542, y: 0.825, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.5457, y: 0.8216, z: 0.020713}
+  m_LocalScale: {x: 0.79671, y: 0.79671, z: 0.79671}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5378657192056757522}
@@ -10030,7 +10030,8 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: f00ac47e5c7659440a21afd1175d8f20, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: f00ac47e5c7659440a21afd1175d8f20,
+            type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -10045,7 +10046,8 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 72dd93adac6d2ed45b72f9e9ddf0a131, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 72dd93adac6d2ed45b72f9e9ddf0a131,
+            type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -10092,7 +10094,8 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 97cc681a105798a44916efd675389042, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 97cc681a105798a44916efd675389042,
+            type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

@@ -5412,7 +5412,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: -0.0364, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 443350}
@@ -9241,7 +9241,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -9294,7 +9294,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -9347,7 +9347,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -9400,7 +9400,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -13750,7 +13750,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: d8603b41eb2844649b9e02a41d1e1ad2, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18651,7 +18650,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: d8603b41eb2844649b9e02a41d1e1ad2, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18714,6 +18712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470842}
   - component: {fileID: 10870846}
+  - component: {fileID: 255418800053353488}
   m_Layer: 2
   m_Name: Point light
   m_TagString: Weapon
@@ -18730,7 +18729,7 @@ Transform:
   m_GameObject: {fileID: 170842}
   serializedVersion: 2
   m_LocalRotation: {x: -0.03645332, y: 0.6411859, z: 0.7524059, w: -0.1464145}
-  m_LocalPosition: {x: 0.019133804, y: 0.06267741, z: 0.15894839}
+  m_LocalPosition: {x: 0.019133804, y: 0.06267741, z: 0.1388}
   m_LocalScale: {x: -8.398152, y: 7.841673, z: 6.729926}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18798,6 +18797,29 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &255418800053353488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &192188
 GameObject:
   m_ObjectHideFlags: 0
@@ -18823,7 +18845,7 @@ Transform:
   m_GameObject: {fileID: 192188}
   serializedVersion: 2
   m_LocalRotation: {x: 0.3855644, y: 0.5764498, z: 0.61335254, w: -0.37794775}
-  m_LocalPosition: {x: -0.0547, y: -0.0775, z: -0.1407}
+  m_LocalPosition: {x: 0.0056, y: -0.0935, z: -0.0904}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
