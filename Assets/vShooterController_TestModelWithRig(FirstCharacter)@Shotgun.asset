@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: vShooterController_TestModelWithRig(FirstCharacter)@Shotgun
   m_EditorClassIdentifier: 
   weaponCategories:
-  - HandGun
-  - Pistol
+  - Shotgun
   ikAdjustsLeft:
   - name: Standing
     weaponHandOffset:
@@ -84,32 +83,32 @@ MonoBehaviour:
   - name: Standing
     weaponHandOffset:
       position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
     weaponHintOffset:
       position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
     supportHandOffset:
-      position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: 0, y: 0, z: 0}
+      position: {x: 0.024815086, y: -0.01880851, z: 0.035335302}
+      eulerAngles: {x: 353.6424, y: 273.5379, z: 278.149}
     supportHintOffset:
-      position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: 0, y: 0, z: 0}
+      position: {x: 0.033770364, y: -0.0033760983, z: 0.054679096}
+      eulerAngles: {x: -0, y: 0, z: 0}
     spineOffset:
       spine: {x: 0, y: 0}
       head: {x: 0, y: 0}
   - name: StandingAiming
     weaponHandOffset:
-      position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: 0, y: 0, z: 0}
+      position: {x: 0.090081796, y: 0.028402498, z: -0.018137813}
+      eulerAngles: {x: 359.5959, y: 357.5953, z: 1.1340792}
     weaponHintOffset:
       position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
     supportHandOffset:
-      position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: 0, y: 0, z: 0}
+      position: {x: -0.014099507, y: 0.0011856724, z: 0.03586158}
+      eulerAngles: {x: 5.7242846, y: 241.43784, z: 279.42792}
     supportHintOffset:
-      position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: 0, y: 0, z: 0}
+      position: {x: 1e-45, y: -1e-45, z: 1e-45}
+      eulerAngles: {x: -0, y: 0, z: 0}
     spineOffset:
       spine: {x: 0, y: 0}
       head: {x: 0, y: 0}
