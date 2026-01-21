@@ -17,7 +17,7 @@ public class Zombe : MonoBehaviour, IEnemy, IPauseble
     private void Awake()
     {
         _controller = GetComponent<vSimpleMeleeAI_Controller>();
-        PauseHandler.Add(this);
+        //PauseHandler.Add(this); zxc
     }
 
     private void Update()

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea0d3064734a48468456123b5fd1b71, type: 3}
+  m_Name: PowerfulPickaxe
+  m_EditorClassIdentifier: 
+  <PrewiewPrefab>k__BackingField: {fileID: 9076849545366898027, guid: ae68d1279149d6b4396937e9bc449bf7, type: 3}
+  <Prefab>k__BackingField: {fileID: 9076849545366898027, guid: ae68d1279149d6b4396937e9bc449bf7, type: 3}
+  <Image>k__BackingField: {fileID: 21300000, guid: 3a78637d3388f044daa876c105ee2349, type: 3}
+  <Price>k__BackingField: 3500
+  <SerialNumber>k__BackingField: 6
+  <PurchaseId>k__BackingField: 
+  <MethodObtainingSkin>k__BackingField: 1
+  <SkinType>k__BackingField: 3

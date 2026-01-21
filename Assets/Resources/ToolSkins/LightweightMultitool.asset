@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea0d3064734a48468456123b5fd1b71, type: 3}
+  m_Name: LightweightMultitool
+  m_EditorClassIdentifier: 
+  <PrewiewPrefab>k__BackingField: {fileID: 8409150474230062687, guid: e4e07d28570f4a048a420c5fdd76c3f4, type: 3}
+  <Prefab>k__BackingField: {fileID: 8409150474230062687, guid: e4e07d28570f4a048a420c5fdd76c3f4, type: 3}
+  <Image>k__BackingField: {fileID: 21300000, guid: 3f3a60243ed1f5046b76dd01101933fa, type: 3}
+  <Price>k__BackingField: 12500
+  <SerialNumber>k__BackingField: 7
+  <PurchaseId>k__BackingField: 
+  <MethodObtainingSkin>k__BackingField: 1
+  <SkinType>k__BackingField: 4

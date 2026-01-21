@@ -1,0 +1,49 @@
+using System;
+
+public class SelectedSkinChecker : IShopItemVisitor
+{
+    private IPersistentData _persistentData;
+
+    public bool IsSelected { get; private set; }
+
+    public SelectedSkinChecker(IPersistentData persistentData) => _persistentData = persistentData;
+
+    public void Visit(ShopItem shopItem)
+    {
+        switch (shopItem)
+        {
+            case CharacterSkinItem:
+                Visit(shopItem as CharacterSkinItem);
+                break;
+
+            case MazeSkinItem:
+                Visit(shopItem as MazeSkinItem);
+                break;
+
+            case ToolSkinItem:
+                Visit(shopItem as ToolSkinItem);
+                break;
+
+            case PetSkinItem:
+                Visit(shopItem as PetSkinItem);
+                break;
+
+            default:
+                throw new NotImplementedException();
+        }
+
+        //Visit((dynamic)shopItem);
+    }
+
+    public void Visit(CharacterSkinItem characterSkinItem) 
+        => IsSelected = _persistentData.PlayerData.SelectedCharacterSkin == characterSkinItem.SkinType;
+
+    public void Visit(MazeSkinItem mazeSkinItem) 
+        => IsSelected = _persistentData.PlayerData.SelectedMazeSkin == mazeSkinItem.SkinType;
+
+    public void Visit(ToolSkinItem toolSkinItem)
+        => IsSelected = _persistentData.PlayerData.SelectedToolSkin == toolSkinItem.SkinType;
+
+    public void Visit(PetSkinItem petSkinItem)
+        => IsSelected = _persistentData.PlayerData.SelectedPetSkin == petSkinItem.SkinType;
+}

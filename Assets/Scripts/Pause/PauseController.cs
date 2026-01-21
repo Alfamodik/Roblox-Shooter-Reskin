@@ -49,7 +49,7 @@ public class PauseController : MonoBehaviour
 
         LockUnlockCursor.ShowOnDesktop(_playerVShooterMeleeInput);
 
-        PauseHandler.SetPause(true);
+        PauseHandler.Pause();
     }
 
     public void TakeOfPause(bool setActiveUI)
@@ -65,7 +65,7 @@ public class PauseController : MonoBehaviour
         _playerVShooterMeleeInput.SetLockAllInput(false);
         LockUnlockCursor.HideOnDesktop(_playerVShooterMeleeInput);
 
-        PauseHandler.SetPause(false);
+        PauseHandler.Play();
     }
 
     public void ChangedPause()

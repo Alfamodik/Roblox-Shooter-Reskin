@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858fab48ff9155e498043ec70438dd5d, type: 3}
+  m_Name: ShopContent
+  m_EditorClassIdentifier: 
+  _characterSkinItems:
+  - {fileID: 11400000, guid: bb41a37a337337a45b31d3ce8529847f, type: 2}
+  - {fileID: 11400000, guid: 6dc1bc5da9a52b14caa975259566af37, type: 2}
+  - {fileID: 11400000, guid: 48f84db0f154d9a4887c14569272afd9, type: 2}
+  - {fileID: 11400000, guid: c2629bd74ed5007409fea325ab3f8253, type: 2}
+  - {fileID: 11400000, guid: a91be7c33e1a6b942a88a8bfc2ef9e8e, type: 2}
+  - {fileID: 11400000, guid: e05a12026d5f0624993d6c99e11243fd, type: 2}
+  - {fileID: 11400000, guid: b0ca140f387815d4388bdbb19f573bd4, type: 2}
+  - {fileID: 11400000, guid: 10572551c55a9d74c8d08166b9de3eef, type: 2}
+  _mazeSkinItems:
+  - {fileID: 11400000, guid: aa81c2b694554124d805d45b5d26caad, type: 2}
+  - {fileID: 11400000, guid: e7ec403a9c84d5e408847471eb2a5117, type: 2}
+  - {fileID: 11400000, guid: f54d4c65c6fe94d4d9ab2dbcbcd04df4, type: 2}
+  - {fileID: 11400000, guid: 00054e59ba48af4469d699890d21733e, type: 2}
+  - {fileID: 11400000, guid: c8d61a8e8061b724ea286cd58c47a21f, type: 2}
+  - {fileID: 11400000, guid: 4d0de817572917b449ad85027b189c22, type: 2}
+  _toolSkinItems:
+  - {fileID: 11400000, guid: 874e4944910d42644ac194e579848f41, type: 2}
+  - {fileID: 11400000, guid: fc1e101902d139e429cd9d9ac7a297f6, type: 2}
+  - {fileID: 11400000, guid: 58e2c5214324a234ba436c7ea90b4ced, type: 2}
+  - {fileID: 11400000, guid: 167e2c1c91a82974b817bf2e467baa36, type: 2}
+  - {fileID: 11400000, guid: 18cba29b616bea44bb19ea014a53e5d2, type: 2}
+  - {fileID: 11400000, guid: 53537e18ee05d6a42ba6575076302208, type: 2}
+  - {fileID: 11400000, guid: 01af781c085a0224b87d0fa7a4c8dc6a, type: 2}
+  - {fileID: 11400000, guid: 28bb4bb73c5f95b4790f8536130ce54c, type: 2}
+  _petSkinItems:
+  - {fileID: 11400000, guid: c21254163b4d8e44582324afb4f5965a, type: 2}
+  - {fileID: 11400000, guid: f2d8268fc5db2e54d92fbb87b682992e, type: 2}
+  - {fileID: 11400000, guid: e628bfec59a094149a0d6c1bde5ed2b5, type: 2}
+  - {fileID: 11400000, guid: 0333c53829d889240a361eb2396f32ad, type: 2}
+  - {fileID: 11400000, guid: 2b8e886c6a91e4447a1fffa5e558359e, type: 2}
+  - {fileID: 11400000, guid: 6e7e4326e808f3143a1914eb256dad1d, type: 2}

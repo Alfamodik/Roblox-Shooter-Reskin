@@ -10,7 +10,7 @@ public class PlayerCompanion : MonoBehaviour, IPauseble
     private void Awake()
     {
         vSimpleMeleeAICompanion = GetComponent<vSimpleMeleeAI_Companion>();
-        PauseHandler.Add(this);
+        //PauseHandler.Add(this); йцу
     }
 
     private void Start() => ReviveCompanion();

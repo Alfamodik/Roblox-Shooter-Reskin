@@ -81,7 +81,7 @@ public class MainGameplayBootstrap : MonoBehaviour
     [ContextMenu("DeleteAllPrefs")]
     public void DeleteAllPrefs() => PlayerPrefs.DeleteAll();
 
-    public void SetPauseByHandler() => PauseHandler.SetPause(true);
+    public void SetPauseByHandler() => PauseHandler.Pause();
 
     public void KillAllEnemy() => _enemylist.KillAllEnemy();
 

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274ac76bbe342994a819bca3e3550193, type: 3}
+  m_Name: Baby Dragon 4
+  m_EditorClassIdentifier: 
+  <PrewiewPrefab>k__BackingField: {fileID: 3740152380956810007, guid: cca15bb2be78f694ea1fb0d609a7ce75, type: 3}
+  <Prefab>k__BackingField: {fileID: 3740152380956810007, guid: 4b473bbdd0653d54bbd15c75acd8f146, type: 3}
+  <Image>k__BackingField: {fileID: 21300000, guid: 5072d6ca1e93da04585de7299ae2e3e7, type: 3}
+  <Price>k__BackingField: 2500000
+  <SerialNumber>k__BackingField: 4
+  <PurchaseId>k__BackingField: 
+  <MethodObtainingSkin>k__BackingField: 1
+  <SkinType>k__BackingField: 3

@@ -373,11 +373,11 @@ namespace Invector.vShooter
                     Vector3 position = ikTarget.position;
                     Quaternion rotation = ikTarget.rotation;
                     EditorGUI.BeginChangeCheck();
-                    if (Tools.current != Tool.Rotate)
+                    if (UnityEditor.Tools.current != UnityEditor.Tool.Rotate)
                     {
-                        position = Handles.PositionHandle(position, Tools.pivotRotation == PivotRotation.Local ? ikTarget.rotation : Quaternion.identity);
+                        position = Handles.PositionHandle(position, UnityEditor.Tools.pivotRotation == PivotRotation.Local ? ikTarget.rotation : Quaternion.identity);
                     }
-                    else if (Tools.current == Tool.Rotate)
+                    else if (UnityEditor.Tools.current == UnityEditor.Tool.Rotate)
                         rotation = Handles.RotationHandle(rotation, position);
                    
                    if( EditorGUI.EndChangeCheck())
@@ -386,7 +386,7 @@ namespace Invector.vShooter
                         Undo.RecordObject(ikController.WeaponIKAdjustList, "Change IK Target Transform");
                         if (ikController.IsLeftWeapon)
                         {
-                            if (Tools.current != Tool.Rotate)
+                            if (UnityEditor.Tools.current != UnityEditor.Tool.Rotate)
                             {
                                 ikTarget.position = position;
                                 ikController.WeaponIKAdjustList.ikTargetPositionOffsetL = ikTarget.localPosition;
@@ -399,7 +399,7 @@ namespace Invector.vShooter
                         }
                         else
                         {
-                            if (Tools.current != Tool.Rotate)
+                            if (UnityEditor.Tools.current != UnityEditor.Tool.Rotate)
                             {
                                 ikTarget.position = position;
                                 ikController.WeaponIKAdjustList.ikTargetPositionOffsetR = ikTarget.localPosition;
@@ -804,12 +804,12 @@ namespace Invector.vShooter
             Vector3 position = target.position;
             Quaternion rotation = target.rotation;
             Handles.DrawLine(target.position, reference.position);
-            if (Tools.current != Tool.Rotate)
+            if (UnityEditor.Tools.current != UnityEditor.Tool.Rotate)
             {
-                position = Handles.PositionHandle(position, Tools.pivotRotation == PivotRotation.Local ? rotation : Quaternion.identity);
+                position = Handles.PositionHandle(position, UnityEditor.Tools.pivotRotation == PivotRotation.Local ? rotation : Quaternion.identity);
             }
 
-            if (Tools.current == Tool.Rotate)
+            if (UnityEditor.Tools.current == UnityEditor.Tool.Rotate)
                 rotation = Handles.RotationHandle(rotation, position);
             if (position != target.position)
             {

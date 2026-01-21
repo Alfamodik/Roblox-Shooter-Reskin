@@ -20,7 +20,7 @@ namespace Invector.vCharacterController.AI
         public int indexOfPatrolPoint;
         public bool hotKeys;
         public bool isPlaying;
-        public Tool tool;
+        public UnityEditor.Tool tool;
         private Texture2D m_Logo = null;
 
 #if INVECTOR_AI_TEMPLATE
@@ -54,7 +54,7 @@ namespace Invector.vCharacterController.AI
         void OnEnable()
         {
             m_Logo = (Texture2D)Resources.Load("icon_v2", typeof(Texture2D));
-            tool = Tools.current;
+            tool = UnityEditor.Tools.current;
             pathArea = (vWaypointArea)target;
             editMode = serializedObject.FindProperty("editMode");
             if (pathArea.waypoints == null)
@@ -386,8 +386,8 @@ namespace Invector.vCharacterController.AI
 
                     }
                 }
-                if (value) Tools.current = Tool.None;
-                else Tools.current = tool;
+                if (value) UnityEditor.Tools.current = UnityEditor.Tool.None;
+                else UnityEditor.Tools.current = tool;
                 EditorUtility.SetDirty(pathArea.gameObject);
                 EditorApplication.RepaintHierarchyWindow();
             }
