@@ -16,7 +16,7 @@ public class PlayerData
 
     public PlayerData(bool setDefaultValues = true)
     {
-        _selectedCharacterSkin = CharacterSkins.Man1;
+        _selectedCharacterSkin = (CharacterSkins) 1;
         _selectedMazeSkin = MazeSkins.Green;
         _selectedToolSkin = ToolSkins.LightweightAxe;
         //_selectedPetSkin = PetSkins.BabyDragon1;

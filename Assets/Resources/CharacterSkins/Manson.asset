@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 333c313b037fd7c4ab23ee8c07537ce6, type: 3}
-  m_Name: Girl 1
+  m_Name: Manson
   m_EditorClassIdentifier: 
-  <PrewiewPrefab>k__BackingField: {fileID: 1701452832260031692, guid: 21d9055c08ea1844a8da6c0868319776, type: 3}
-  <Prefab>k__BackingField: {fileID: 1701452832260031692, guid: 0f81b3a7c28a84d48b316ae002b16aaa, type: 3}
-  <Image>k__BackingField: {fileID: 21300000, guid: 99611b0504c74ba4d8103b35817eaa8f, type: 3}
+  <PrewiewPrefab>k__BackingField: {fileID: 0}
+  <Prefab>k__BackingField: {fileID: 0}
+  <Image>k__BackingField: {fileID: 0}
   <Price>k__BackingField: 0
   <SerialNumber>k__BackingField: 1
-  <PurchaseId>k__BackingField: Girl1
-  <MethodObtainingSkin>k__BackingField: 2
+  <PurchaseId>k__BackingField: Manson
+  <MethodObtainingSkin>k__BackingField: 0
   <SkinType>k__BackingField: 0
