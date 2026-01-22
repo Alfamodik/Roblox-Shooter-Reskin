@@ -3,14 +3,12 @@
 public class SkinEquipper : IShopItemVisitor
 {
     private WeaponSlot _weaponSlot;
-    private readonly PetsSpawner _petsSpawner;
     private readonly CharacterSkinChanger _characterSkinChanger;
 
-    public SkinEquipper(CharacterSkinChanger characterSkinChanger, WeaponSlot weaponSlot, PetsSpawner petsSpawner)
+    public SkinEquipper(CharacterSkinChanger characterSkinChanger, WeaponSlot weaponSlot)
     {
         _characterSkinChanger = characterSkinChanger;
         _weaponSlot = weaponSlot;
-        _petsSpawner = petsSpawner;
     }
 
     public void Reinitialize(WeaponSlot weaponSlot)
@@ -50,6 +48,5 @@ public class SkinEquipper : IShopItemVisitor
     public void Visit(MazeSkinItem mazeSkinItem) => throw new System.NotImplementedException();
 
     public void Visit(ToolSkinItem toolSkinItem) => _weaponSlot.SetWeapon(toolSkinItem);
-
-    public void Visit(PetSkinItem petSkinItem) => _petsSpawner.SpawnPet(petSkinItem);
+    public void Visit(PetSkinItem petSkinItem) => throw new System.NotImplementedException();
 }

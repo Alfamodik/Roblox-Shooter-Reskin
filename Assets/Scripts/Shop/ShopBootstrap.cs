@@ -16,6 +16,6 @@ public class ShopBootstrap : MonoBehaviour
         SkinSelector skinSelector = new SkinSelector(persistentData);
 
         _shop.Initialize(dataCloudProvider, openSkinsChecker, selectedSkinChecker, skinSelector, _skinUnlocker);
-        //YG2.ConsumePurchases();
+        YG2.ConsumePurchases();
     }
 }

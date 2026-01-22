@@ -5,7 +5,6 @@ using YG;
 public class PersistentDataBootstrap : MonoBehaviour
 {
     [SerializeField] private ShopBootstrap _shopBootstrap;
-    [SerializeField] private PetsSpawner _petsSpawner;
     [SerializeField] private CharacterSkinChanger _characterSkinChanger;
 
     private IDataProvider _dataProvider;
@@ -28,7 +27,6 @@ public class PersistentDataBootstrap : MonoBehaviour
 
     private void InitializeRelatedScripts()
     {
-        _petsSpawner?.Initialize(_persistentPlayerData);
         _characterSkinChanger?.Initialize(_persistentPlayerData);
     }
     

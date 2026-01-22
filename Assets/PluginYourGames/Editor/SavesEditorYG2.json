@@ -1,0 +1,29 @@
+{
+    "packedWeaponBayStates": 0,
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 1,
+    "SkinsDataInitialized": true,
+    "SelectedCharacterSkin": 4,
+    "SelectedMazeSkin": 0,
+    "SelectedToolSkin": 0,
+    "SelectedPetSkin": 0,
+    "OpenCharacterSkins": [
+        4
+    ],
+    "OpenMazeSkins": [
+        0
+    ],
+    "OpenToolSkins": [
+        0
+    ],
+    "OpenPetSkins": [],
+    "СurrentToolId": 0,
+    "Balance": 0
+}

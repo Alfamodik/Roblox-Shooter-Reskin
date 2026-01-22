@@ -1,9 +1,9 @@
-using System;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using YG;
+using YG.Utils.Pay;
 
 public class Shop : MonoBehaviour
 {
@@ -33,7 +33,6 @@ public class Shop : MonoBehaviour
 
     [Space]
     [SerializeField] private CharacterSkinChanger _characterSkinChanger;
-    [SerializeField] private PetsSpawner _petsSpawner;
 
     [Space]
     [SerializeField] private Camera _modelCamera;
@@ -88,8 +87,8 @@ public class Shop : MonoBehaviour
 
     private void OnDestroy()
     {
-        //YG2.onRewardAdv -= GiveSkinByCode; qwe
-        //YG2.onPurchaseSuccess -= GiveSkinByCode; qwe
+        YG2.onRewardAdv -= GiveSkinByCode;
+        YG2.onPurchaseSuccess -= GiveSkinByCode;
     }
 
     public void Initialize(IDataProvider dataProvider, OpenSkinsChecker openSkinsChecker, SelectedSkinChecker selectedSkinChecker, SkinSelector skinSelector, SkinUnlocker skinUnlocker)
@@ -99,15 +98,15 @@ public class Shop : MonoBehaviour
         _skinSelector = skinSelector;
         _skinUnlocker = skinUnlocker;
 
-        _skinEquipper = new SkinEquipper(_characterSkinChanger, _weaponSlot, _petsSpawner);
+        _skinEquipper = new SkinEquipper(_characterSkinChanger, _weaponSlot);
         _skinFinder = new SkinFinder(_contentItems);
         
         _dataProvider = dataProvider;
 
         _shopPanel.Initialize(openSkinsChecker, selectedSkinChecker);
 
-        //YG2.onRewardAdv += GiveSkinByCode; qwe
-        //YG2.onPurchaseSuccess += GiveSkinByCode; qwe
+        YG2.onRewardAdv += GiveSkinByCode;
+        YG2.onPurchaseSuccess += GiveSkinByCode;
 
         _shopPanel.ItemViewClicked += OnItemViewClicked;
         _closeButton.onClick.AddListener(Close);
@@ -129,7 +128,7 @@ public class Shop : MonoBehaviour
         PauseHandler.Pause();
         CursorController.UnlockCursor();
 
-        OnToolSkinsButtonClick();
+        OnCharacterSkinsButtonClick();
     }
 
     public void Close()
@@ -140,8 +139,8 @@ public class Shop : MonoBehaviour
         PauseHandler.Play();
         CursorController.LockCursor();
 
-        //if (YG2.isTimerAdvCompleted)
-        //    YG2.InterstitialAdvShow();
+        if (YG2.isTimerAdvCompleted)
+            YG2.InterstitialAdvShow();
     }
 
     private void OnItemViewClicked(ShopItemView item)
@@ -195,11 +194,11 @@ public class Shop : MonoBehaviour
                 break;
 
             case MethodObtainingSkin.Reward:
-                //YG2.RewardedAdvShow(_previewedItem.Item.PurchaseId); qwe
+                YG2.RewardedAdvShow(_previewedItem.Item.PurchaseId);
                 break;
 
             case MethodObtainingSkin.InApp:
-                //YG2.BuyPayments(_previewedItem.Item.PurchaseId); qwe
+                YG2.BuyPayments(_previewedItem.Item.PurchaseId);
                 break;
 
             default:
@@ -345,8 +344,8 @@ public class Shop : MonoBehaviour
                 ShowInAppButton();
                 _inAppButton.UpdateText(price);
 
-                //Purchase purchase = YG2.PurchaseByID(_previewedItem.Item.PurchaseId); qwe
-                //_purchaseCurrencyImage.urlImage = purchase.currencyImageURL; qwe
+                Purchase purchase = YG2.PurchaseByID(_previewedItem.Item.PurchaseId);
+                _purchaseCurrencyImage.urlImage = purchase.currencyImageURL;
                 _purchaseCurrencyImage.Load();
 
                 break;

@@ -20,7 +20,7 @@ public class CharacterSkinChanger : MonoBehaviour
 
     private void Start()
     {
-        LoadSkin();
+        //LoadSkin();
     }
 
     public void Initialize(IPersistentData iPersistentData)
