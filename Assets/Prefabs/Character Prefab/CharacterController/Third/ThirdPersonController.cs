@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 using YG;
 
 [RequireComponent(typeof(CharacterController))]
@@ -237,8 +236,8 @@ public class ThirdPersonController : MonoBehaviour, IPausable
         }
         else
         {
-            horizontal = 0; //joystick.Horizontal; zxc
-            vertical = 0; //joystick.Vertical; zxc
+            horizontal = joystick.Horizontal;
+            vertical = joystick.Vertical;
         }
 
         // Создание вектора движения относительно камеры
