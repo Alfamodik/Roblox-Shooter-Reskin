@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-//using YG;
+using YG;
 
 public class ToolsContainer : MonoBehaviour
 {
@@ -74,19 +74,14 @@ public class ToolsContainer : MonoBehaviour
         BitArray bitArray = new(flags);
         bitArray.CopyTo(bytes, 0);
 
-        int packedStates = BitConverter.ToInt32(bytes, 0);
-        PlayerPrefs.SetInt("packedWeaponBayStates", packedStates);
-        PlayerPrefs.Save();
-        //YG2.saves.packedWeaponBayStates = BitConverter.ToInt32(bytes, 0);
-        //YG2.SaveProgress();
+        YG2.saves.packedWeaponBayStates = BitConverter.ToInt32(bytes, 0);
+        YG2.SaveProgress();
     }
 
     private void LoadWeaponBayStates()
     {
         bool[] flags = new bool[_wosGet.Count];
-        int packedStates = PlayerPrefs.GetInt("packedWeaponBayStates", 0);
-        byte[] bytes = BitConverter.GetBytes(packedStates);
-        //byte[] bytes = BitConverter.GetBytes(YG2.saves.packedWeaponBayStates);
+        byte[] bytes = BitConverter.GetBytes(YG2.saves.packedWeaponBayStates);
         BitArray bitArray = new(bytes);
 
         for (int i = 0; i < flags.Length; i++)
@@ -111,10 +106,10 @@ public class BayInfo
     }
 }
 
-/*namespace YG
+namespace YG
 {
     public partial class SavesYG
     {
         public int packedWeaponBayStates;
     }
-}*/
+}

@@ -3,7 +3,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-//using YG;
+using YG;
+using YG.Utils.Pay;
 
 [RequireComponent(typeof(Image))]
 public class ShopItemView : MonoBehaviour, IPointerClickHandler
@@ -19,7 +20,7 @@ public class ShopItemView : MonoBehaviour, IPointerClickHandler
     [SerializeField] private IntValueView _moneyPriceView;
     [SerializeField] private GameObject _rewardedPriceView;
     [SerializeField] private IntValueView _currencyPriceView;
-    //[SerializeField] private ImageLoadYG _purchaseCurrencyImage;
+    [SerializeField] private ImageLoadYG _purchaseCurrencyImage;
 
     [SerializeField] private Image _selectionText;
 
@@ -74,12 +75,12 @@ public class ShopItemView : MonoBehaviour, IPointerClickHandler
 
     public void LoadCurrency()
     {
-        /*if (Item.MethodObtainingSkin != MethodObtainingSkin.InApp || !string.IsNullOrWhiteSpace(_purchaseCurrencyImage.urlImage))
+        if (Item.MethodObtainingSkin != MethodObtainingSkin.InApp || !string.IsNullOrWhiteSpace(_purchaseCurrencyImage.urlImage))
             return;
 
         Purchase purchase = YG2.PurchaseByID(Item.PurchaseId);
         _purchaseCurrencyImage.urlImage = purchase.currencyImageURL;
-        _purchaseCurrencyImage.Load();*/
+        _purchaseCurrencyImage.Load();
     }
 
     private void HidePrice()

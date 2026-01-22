@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-//using YG;
+using YG;
+using YG.LanguageLegacy;
+using YG.Utils.Pay;
 
 public class ShopGetButton : MonoBehaviour
 {
@@ -34,9 +36,9 @@ public class ShopGetButton : MonoBehaviour
     {
         _getStartText = _get.text;
 
-        /*Destroy(_get.GetComponent<LanguageYG>());
+        Destroy(_get.GetComponent<LanguageYG>());
         Destroy(_put.GetComponent<LanguageYG>());
-        Destroy(_putOn.GetComponent<LanguageYG>());*/
+        Destroy(_putOn.GetComponent<LanguageYG>());
 
         _get.gameObject.SetActive(false);
         _put.gameObject.SetActive(false);
@@ -116,7 +118,7 @@ public class ShopGetButton : MonoBehaviour
                         break;
 
                     case MethodObtainingSkin.InApp:
-                        /*Purchase purchase = YG2.PurchaseByID(weapon.PurchaseId);
+                        Purchase purchase = YG2.PurchaseByID(weapon.PurchaseId);
                         _get.SetText($"{_getStartText} {purchase.price}");
 
                         iconImageMoney.gameObject.SetActive(false);
@@ -128,7 +130,7 @@ public class ShopGetButton : MonoBehaviour
                         imageLoadYG.urlImage = purchase.currencyImageURL;
                         imageLoadYG.Load();
 
-                        button.onClick.AddListener(() => tryGet.Invoke(MethodObtainingSkin.InApp, weaponIndex));*/
+                        button.onClick.AddListener(() => tryGet.Invoke(MethodObtainingSkin.InApp, weaponIndex));
                         break;
                 }
             }

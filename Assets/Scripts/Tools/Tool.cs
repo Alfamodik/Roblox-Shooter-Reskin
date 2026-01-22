@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public class Tool : MonoBehaviour
+namespace GoldMagnat
 {
-
-    [SerializeField] private ToolData toolData;
-    public ToolData ToolData => toolData;
+    public class Tool : MonoBehaviour
+    {
+        [SerializeField] private ToolData toolData;
+        public ToolData ToolData => toolData;
+    }
 }

@@ -1,27 +1,26 @@
 using UnityEngine;
-//using YG;
+using YG;
 
 public static class ToolSaver
 {
     public static void SaveCurrentTool(int toolId)
     {
-        PlayerPrefs.SetInt("CurrentToolId", toolId);
-        PlayerPrefs.Save();
+        YG2.saves.СurrentToolId = toolId;
+        YG2.SaveProgress();
         Debug.Log($"Сохранен инструмент с ID: {toolId}");
     }
     
     public static int LoadCurrentTool()
     {
-        int toolId = PlayerPrefs.GetInt("CurrentToolId", 0);
-        Debug.Log($"Загружен инструмент с ID: {toolId}");
-        return toolId;
+        Debug.Log($"Загружен инструмент с ID: {YG2.saves.СurrentToolId}");
+        return YG2.saves.СurrentToolId;
     }
 }
 
-/*namespace YG
+namespace YG
 {
     public partial class SavesYG
     {
         public int СurrentToolId;
     }
-}*/
+}

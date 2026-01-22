@@ -1,8 +1,7 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-//using YG;
+using YG;
 using DG.Tweening;
 
 public class ResultsPanel : MonoBehaviour
@@ -47,13 +46,13 @@ public class ResultsPanel : MonoBehaviour
 
     private void LoadMainScene()
     {
-        //if (YG2.isTimerAdvCompleted)
-        //    YG2.InterstitialAdvShow();
+        if (YG2.isTimerAdvCompleted)
+            YG2.InterstitialAdvShow();
 
         PauseHandler.Play();
         CursorController.LockCursor();
 
-        //YG2.InterstitialAdvShow();
+        YG2.InterstitialAdvShow();
         SceneManager.LoadSceneAsync(MainScene);
     }
 

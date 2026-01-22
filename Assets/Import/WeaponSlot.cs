@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
-//using YG;
+using YG;
 
 public class WeaponSlot : MonoBehaviour
 {
@@ -42,8 +42,8 @@ public class WeaponSlot : MonoBehaviour
             _currentWeapon = Instantiate(newWeapon.Prefab, transform);
             CurrentWeapons = index;
 
-            //YG2.saves.СurrentToolId = index;
-            //YG2.SaveProgress();
+            YG2.saves.СurrentToolId = index;
+            YG2.SaveProgress();
 
             PlayerPrefs.SetInt("Selected_Weapon_ID", index);
             PlayerPrefs.Save();
@@ -58,8 +58,7 @@ public class WeaponSlot : MonoBehaviour
     
     private void LoadSelectedWeapon()
     {
-        int weaponId = PlayerPrefs.GetInt("Selected_Weapon_ID", 0);
-        Debug.Log($"[WeaponSlot] Загружаем выбранное оружие с ID: {weaponId}");
-        SetWeapon(weaponId);
+        Debug.Log($"[WeaponSlot] Загружаем выбранное оружие с ID: {YG2.saves.СurrentToolId}");
+        SetWeapon(YG2.saves.СurrentToolId);
     }
 }

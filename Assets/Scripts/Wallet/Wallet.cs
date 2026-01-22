@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-//using YG;
+using YG;
 
 public class Wallet : MonoBehaviour
 {
@@ -64,7 +64,7 @@ public class Wallet : MonoBehaviour
 
     private void Initialize()
     {
-/*#if UNITY_EDITOR
+#if UNITY_EDITOR
         if (_setDefaultSavesOnAwake)
         {
             if (YG2.isSDKEnabled)
@@ -72,44 +72,43 @@ public class Wallet : MonoBehaviour
             else
                 StartCoroutine(SetDefaultSavesAfterSdkInit());
         }
-#endif*/
+#endif
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
         BalanceChanged = new UnityEvent<int>();
-        Balance = PlayerPrefs.GetInt("Balance", 0);
+        Balance = YG2.saves.Balance;
     }
 
     private void Save()
     {
-        PlayerPrefs.SetInt("Balance", Balance);
-        //YG2.saves.Balance = Balance;
-        //YG2.SetLeaderboard("CurrentMoney", Balance);
+        YG2.saves.Balance = Balance;
+        YG2.SetLeaderboard("CurrentMoney", Balance);
 
         if (PlayerPrefs.GetInt("HighestBalance") < Balance)
         {
             PlayerPrefs.SetInt("HighestBalance", Balance);
-            //YG2.SetLeaderboard("MoneyTop", Balance);
+            YG2.SetLeaderboard("MoneyTop", Balance);
         }
         
         PlayerPrefs.Save();
         
-        //if (YG2.isSDKEnabled)
-        //    YG2.SaveProgress();
+        if (YG2.isSDKEnabled)
+            YG2.SaveProgress();
     }
 
     private void UpdateLeaderboardReceivedMoney(int receivedMoney)
     {
         int moneyReceived = PlayerPrefs.GetInt("MoneyReceived") + receivedMoney;
         PlayerPrefs.SetInt("MoneyReceived", moneyReceived);
-        //YG2.SetLeaderboard("MoneyReceived", moneyReceived);
+        YG2.SetLeaderboard("MoneyReceived", moneyReceived);
 
-        //if (YG2.isSDKEnabled)
-        //    YG2.SaveProgress();
+        if (YG2.isSDKEnabled)
+            YG2.SaveProgress();
     }
 
-/*    private void SetDefaultSaves()
+    private void SetDefaultSaves()
     {
         YG2.SetDefaultSaves();
         YG2.SaveProgress();
@@ -119,13 +118,13 @@ public class Wallet : MonoBehaviour
     {
         yield return new WaitUntil(() => YG2.isSDKEnabled);
         SetDefaultSaves();
-    }*/
+    }
 }
 
-/*namespace YG
+namespace YG
 {
     public partial class SavesYG
     {
         public int Balance;
     }
-}*/
+}

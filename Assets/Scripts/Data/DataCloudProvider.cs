@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-//using YG;
+using YG;
 
 public class DataCloudProvider : IDataProvider
 {
@@ -12,7 +12,7 @@ public class DataCloudProvider : IDataProvider
 
     public void Save()
     {
-        /*YG2.saves.SelectedCharacterSkin = (int)PlayerData.SelectedCharacterSkin;
+        YG2.saves.SelectedCharacterSkin = (int)PlayerData.SelectedCharacterSkin;
         YG2.saves.SelectedMazeSkin = (int)PlayerData.SelectedMazeSkin;
         YG2.saves.SelectedToolSkin = (int)PlayerData.SelectedToolSkin;
         //YG2.saves.SelectedPetSkin = (int)PlayerData.SelectedPetSkin;
@@ -23,12 +23,12 @@ public class DataCloudProvider : IDataProvider
         YG2.saves.OpenPetSkins = PlayerData.OpenPetSkins.Select(skins => (int)skins).ToList();
 
         YG2.saves.SkinsDataInitialized = true;
-        YG2.SaveProgress();*/
+        YG2.SaveProgress();
     }
 
     public bool TryLoad()
     {
-        /*if (!YG2.saves.SkinsDataInitialized)
+        if (!YG2.saves.SkinsDataInitialized)
             return false;
 
         _persistentData.PlayerData = new(false);
@@ -50,12 +50,11 @@ public class DataCloudProvider : IDataProvider
         PlayerData.SelectedToolSkin = (ToolSkins)YG2.saves.SelectedToolSkin;
         //PlayerData.SelectedPetSkin = (PetSkins)YG2.saves.SelectedPetSkin;
 
-        return true;*/
-        return false;
+        return true;
     }
 }
 
-/*namespace YG
+namespace YG
 {
     public partial class SavesYG
     {
@@ -71,4 +70,4 @@ public class DataCloudProvider : IDataProvider
         public List<int> OpenToolSkins;
         public List<int> OpenPetSkins;
     }
-}*/
+}

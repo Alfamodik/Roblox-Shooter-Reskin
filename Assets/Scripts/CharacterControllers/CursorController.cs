@@ -1,5 +1,5 @@
 using UnityEngine;
-//using YG;
+using YG;
 
 public class CursorController : MonoBehaviour
 {
@@ -13,11 +13,11 @@ public class CursorController : MonoBehaviour
 
     public static void LockCursor()
     {
-        //if (YG2.envir.isDesktop)
-        //{
+        if (YG2.envir.isDesktop)
+        {
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-        //}
+        }
     }
 
     public static void UnlockCursor()
