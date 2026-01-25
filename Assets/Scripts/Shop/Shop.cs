@@ -16,6 +16,7 @@ public class Shop : MonoBehaviour
     [SerializeField] private ShopCategoryButton _mazeSkinsButton;
     [SerializeField] private ShopCategoryButton _toolSkinsButton;
     [SerializeField] private ShopCategoryButton _petSkinsButton;
+    [SerializeField] private ShopCategoryButton _weaponSkinsButton;
 
     [Space]
     [SerializeField] private Image _selectedText;
@@ -41,6 +42,7 @@ public class Shop : MonoBehaviour
     [SerializeField] private Transform _mazeCategoryCameraPosition;
     [SerializeField] private Transform _toolCategoryCameraPosition;
     [SerializeField] private Transform _petCategoryCameraPosition;
+    [SerializeField] private Transform _weaponCategoryCameraPosition;
 
     private WeaponSlot _weaponSlot;
     private SkinFinder _skinFinder;
@@ -62,6 +64,7 @@ public class Shop : MonoBehaviour
         _mazeSkinsButton.Click += OnMazeSkinsButtonClick;
         _toolSkinsButton.Click += OnToolSkinsButtonClick;
         _petSkinsButton.Click += OnPetSkinsButtonClick;
+        _weaponSkinsButton.Click += OnWeaponSkinsButtonClick;
 
         _shopPanel.ItemViewClicked += OnItemViewClicked;
 
@@ -77,6 +80,7 @@ public class Shop : MonoBehaviour
         _mazeSkinsButton.Click -= OnMazeSkinsButtonClick;
         _toolSkinsButton.Click -= OnToolSkinsButtonClick;
         _petSkinsButton.Click -= OnPetSkinsButtonClick;
+        _weaponSkinsButton.Click -= OnWeaponSkinsButtonClick;
 
         _shopPanel.ItemViewClicked -= OnItemViewClicked;
         
@@ -230,9 +234,10 @@ public class Shop : MonoBehaviour
 
     private void OnCharacterSkinsButtonClick()
     {
-        _mazeSkinsButton.Unselect();
         _characterSkinsButton.Select();
+        _mazeSkinsButton.Unselect();
         _toolSkinsButton.Unselect();
+        _weaponSkinsButton.Unselect();
         _petSkinsButton.Unselect();
 
         UpdateCameraTransform(_characterCategoryCameraPosition);
@@ -242,9 +247,10 @@ public class Shop : MonoBehaviour
 
     private void OnMazeSkinsButtonClick()
     {
-        _mazeSkinsButton.Select();
         _characterSkinsButton.Unselect();
+        _mazeSkinsButton.Select();
         _toolSkinsButton.Unselect();
+        _weaponSkinsButton.Unselect();
         _petSkinsButton.Unselect();
 
         UpdateCameraTransform(_mazeCategoryCameraPosition);
@@ -254,9 +260,10 @@ public class Shop : MonoBehaviour
 
     private void OnToolSkinsButtonClick()
     {
-        _mazeSkinsButton.Unselect();
         _characterSkinsButton.Unselect();
+        _mazeSkinsButton.Unselect();
         _toolSkinsButton.Select();
+        _weaponSkinsButton.Unselect();
         _petSkinsButton.Unselect();
 
         UpdateCameraTransform(_toolCategoryCameraPosition);
@@ -264,11 +271,25 @@ public class Shop : MonoBehaviour
         _shopPanel.Show(_contentItems.ToolSkinItems.Cast<ShopItem>());
     }
 
+    private void OnWeaponSkinsButtonClick()
+    {
+        _characterSkinsButton.Unselect();
+        _mazeSkinsButton.Unselect();
+        _toolSkinsButton.Unselect();
+        _weaponSkinsButton.Select();
+        _petSkinsButton.Unselect();
+
+        UpdateCameraTransform(_weaponCategoryCameraPosition);
+
+        _shopPanel.Show(_contentItems.WeaponSkinItems.Cast<ShopItem>());
+    }
+
     private void OnPetSkinsButtonClick()
     {
-        _mazeSkinsButton.Unselect();
         _characterSkinsButton.Unselect();
+        _mazeSkinsButton.Unselect();
         _toolSkinsButton.Unselect();
+        _weaponSkinsButton.Unselect();
         _petSkinsButton.Select();
 
         UpdateCameraTransform(_petCategoryCameraPosition);
