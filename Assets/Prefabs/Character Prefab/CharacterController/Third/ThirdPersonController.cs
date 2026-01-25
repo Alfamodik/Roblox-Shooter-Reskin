@@ -39,7 +39,7 @@ public class ThirdPersonController : MonoBehaviour, IPausable
 
     [Header("Animation")] 
     public Animator animator;
-    public CharacterSkinChanger characterSkinChanger;
+    //public CharacterSkinChanger characterSkinChanger;
 
     [Header("Sounds")]
     public AudioClip[] stepSounds;
@@ -68,7 +68,7 @@ public class ThirdPersonController : MonoBehaviour, IPausable
         controller = GetComponent<CharacterController>();
         InitializeCamera();
 
-        characterSkinChanger.AnimatorChanged += UpdateAnimator;
+        //characterSkinChanger.AnimatorChanged += UpdateAnimator;
 
         currentCameraDistance = cameraDistance;
         InitializeClipPoints();

@@ -8,14 +8,18 @@
         false,
         false
     ],
-    "idSave": 1,
+    "idSave": 17,
     "SkinsDataInitialized": true,
-    "SelectedCharacterSkin": 4,
+    "SelectedCharacterSkin": 2,
     "SelectedMazeSkin": 0,
     "SelectedToolSkin": 0,
     "SelectedPetSkin": 0,
     "OpenCharacterSkins": [
-        4
+        4,
+        2,
+        0,
+        3,
+        1
     ],
     "OpenMazeSkins": [
         0

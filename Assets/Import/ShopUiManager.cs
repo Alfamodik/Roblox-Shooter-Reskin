@@ -167,7 +167,7 @@ public class ShopUiManager : MonoBehaviour
     public void Open()
     {
         PauseHandler.Pause();
-        CursorController.UnlockCursor();
+        //CursorController.UnlockCursor();
         gameObject.SetActive(true);
         weaponCamera.gameObject.SetActive(true);
 
@@ -186,7 +186,7 @@ public class ShopUiManager : MonoBehaviour
         if (showInterstitialAdv)
             YG2.InterstitialAdvShow();
 
-        CursorController.LockCursor();
+        //CursorController.LockCursor();
         PauseHandler.Play();
     }
 
@@ -206,7 +206,7 @@ public class ShopUiManager : MonoBehaviour
         characterThirdPersonController.SetPlayerState(ThirdPersonController.PlayerState.Idle);
 
         YG2.InterstitialAdvShow();
-        CursorController.LockCursor();
+        //CursorController.LockCursor();
         PauseHandler.Play();
     }
 

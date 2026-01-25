@@ -1,9 +1,11 @@
+using Invector.vCharacterController;
 using UnityEngine;
 using YG;
 
 public class CursorController : MonoBehaviour
 {
     [SerializeField] private bool _lockOnAwake = true;
+    [SerializeField] private vThirdPersonInput _characterInput;
 
     private void Awake()
     {
@@ -11,18 +13,33 @@ public class CursorController : MonoBehaviour
             LockCursor();
     }
 
-    public static void LockCursor()
+    private void OnEnable()
+    {
+        CharacterSkinChanger.CharacterChanged += OnCharacterChanged;
+    }
+
+    private void OnDisable()
+    {
+        CharacterSkinChanger.CharacterChanged -= OnCharacterChanged;
+    }
+
+    private void OnCharacterChanged(vThirdPersonInput characterInput)
+    {
+        _characterInput = characterInput;
+    }
+
+    public void LockCursor()
     {
         if (YG2.envir.isDesktop)
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            _characterInput.ShowCursor(false);
+            _characterInput.LockCursor(false);
         }
     }
 
-    public static void UnlockCursor()
+    public void UnlockCursor()
     {
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        _characterInput.ShowCursor(true);
+        _characterInput.LockCursor(true);
     }
 }

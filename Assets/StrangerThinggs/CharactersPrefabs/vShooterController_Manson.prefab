@@ -6913,7 +6913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 1
-  selectedToolbar: 1
+  selectedToolbar: 3
   _isDead: 1
   _currentHealth: 0
   isImmortal: 0
@@ -25086,7 +25086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3176261037866695230
 RectTransform:
   m_ObjectHideFlags: 0
@@ -67083,6 +67083,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7330225090165790381, guid: 1ce8a1f716d543c41b9314eda450f431,
+        type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7531594432576873972, guid: 1ce8a1f716d543c41b9314eda450f431,
         type: 3}

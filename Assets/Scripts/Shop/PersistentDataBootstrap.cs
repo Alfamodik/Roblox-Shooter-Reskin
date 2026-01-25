@@ -27,7 +27,7 @@ public class PersistentDataBootstrap : MonoBehaviour
 
     private void InitializeRelatedScripts()
     {
-        _characterSkinChanger?.Initialize(_persistentPlayerData);
+        //_characterSkinChanger?.Initialize(_persistentPlayerData);
     }
     
     private void LoadDataOrInit()

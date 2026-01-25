@@ -13,14 +13,11 @@ MonoBehaviour:
   m_Name: ShopContent
   m_EditorClassIdentifier: 
   _characterSkinItems:
-  - {fileID: 11400000, guid: bb41a37a337337a45b31d3ce8529847f, type: 2}
-  - {fileID: 11400000, guid: 6dc1bc5da9a52b14caa975259566af37, type: 2}
-  - {fileID: 11400000, guid: 48f84db0f154d9a4887c14569272afd9, type: 2}
-  - {fileID: 11400000, guid: c2629bd74ed5007409fea325ab3f8253, type: 2}
-  - {fileID: 11400000, guid: a91be7c33e1a6b942a88a8bfc2ef9e8e, type: 2}
-  - {fileID: 11400000, guid: e05a12026d5f0624993d6c99e11243fd, type: 2}
-  - {fileID: 11400000, guid: b0ca140f387815d4388bdbb19f573bd4, type: 2}
-  - {fileID: 11400000, guid: 10572551c55a9d74c8d08166b9de3eef, type: 2}
+  - {fileID: 11400000, guid: 16de44018dc080d4fa466d60ad5e46cb, type: 2}
+  - {fileID: 11400000, guid: 6e2634cb91f8a6148a2330aa7224786a, type: 2}
+  - {fileID: 11400000, guid: 71089396126a57c4d8b2be9fd72cdd1d, type: 2}
+  - {fileID: 11400000, guid: 61db54419cd7bc5448cbcdca4220aec8, type: 2}
+  - {fileID: 11400000, guid: b6afaf8985f4dd1418791f29f8e5b7f2, type: 2}
   _mazeSkinItems:
   - {fileID: 11400000, guid: aa81c2b694554124d805d45b5d26caad, type: 2}
   - {fileID: 11400000, guid: e7ec403a9c84d5e408847471eb2a5117, type: 2}

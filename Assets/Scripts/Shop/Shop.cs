@@ -33,6 +33,7 @@ public class Shop : MonoBehaviour
 
     [Space]
     [SerializeField] private CharacterSkinChanger _characterSkinChanger;
+    [SerializeField] private CursorController _cursorController;
 
     [Space]
     [SerializeField] private Camera _modelCamera;
@@ -111,7 +112,7 @@ public class Shop : MonoBehaviour
         _shopPanel.ItemViewClicked += OnItemViewClicked;
         _closeButton.onClick.AddListener(Close);
 
-        _characterSkinChanger.WeaponSlotChanged += UpdateWeaponSlot;
+        //_characterSkinChanger.WeaponSlotChanged += UpdateWeaponSlot;
     }
 
     private void UpdateWeaponSlot(WeaponSlot weaponSlot)
@@ -126,7 +127,9 @@ public class Shop : MonoBehaviour
 
         _shopCanvas.SetActive(true);
         PauseHandler.Pause();
-        CursorController.UnlockCursor();
+        
+        if (_cursorController != null)
+            _cursorController.UnlockCursor();
 
         OnCharacterSkinsButtonClick();
     }
@@ -137,7 +140,9 @@ public class Shop : MonoBehaviour
         
         _shopCanvas.SetActive(false);
         PauseHandler.Play();
-        CursorController.LockCursor();
+        
+        if (_cursorController != null)
+            _cursorController.LockCursor();
 
         if (YG2.isTimerAdvCompleted)
             YG2.InterstitialAdvShow();

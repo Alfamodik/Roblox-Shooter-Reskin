@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c313b037fd7c4ab23ee8c07537ce6, type: 3}
   m_Name: Harington
   m_EditorClassIdentifier: 
-  <PrewiewPrefab>k__BackingField: {fileID: 0}
-  <Prefab>k__BackingField: {fileID: 0}
-  <Image>k__BackingField: {fileID: 0}
+  <PrewiewPrefab>k__BackingField: {fileID: 6696545400735184481, guid: 2c89f412ecc282041b149ba7ed9daf75,
+    type: 3}
+  <Prefab>k__BackingField: {fileID: 212225918979167917, guid: bcafbd7343e211c4cba5c8485321c6e4,
+    type: 3}
+  <Image>k__BackingField: {fileID: 21300000, guid: 6fc987e7070ef78479c61df64d33687e,
+    type: 3}
   <Price>k__BackingField: 0
   <SerialNumber>k__BackingField: 1
   <PurchaseId>k__BackingField: Harington
