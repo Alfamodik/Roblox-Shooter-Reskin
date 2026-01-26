@@ -17,7 +17,6 @@ public class ShopItemViewFactory : ScriptableObject
         ShopItemView instance = Instantiate(visitor.Prefab, parent);
         instance.Initialize(shopItem);
 
-        Debug.Log("return instance;");
         return instance;
     }
 

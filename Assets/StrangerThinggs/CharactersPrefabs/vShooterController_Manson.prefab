@@ -7463,7 +7463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 4
+  selectedToolbar: 1
   canUseMeleeBlock_H: 0
   canUseMeleeWeakAttack_H: 1
   canUseMeleeStrongAttack_H: 1
@@ -7473,7 +7473,7 @@ MonoBehaviour:
   canUseMeleeAiming: 0
   damageLayer:
     serializedVersion: 2
-    m_Bits: 32769
+    m_Bits: 33281
   ignoreTags:
     tags:
     - Player

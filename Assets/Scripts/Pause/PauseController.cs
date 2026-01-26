@@ -20,12 +20,25 @@ public class PauseController : MonoBehaviour
     {
         foreach (var item in _audioSources)
             GlobalAudio.AddSource(item);
+        
+        CharacterSkinChanger.CharacterChanged += OnCharacterChanged;
+    }
+
+    private void OnDestroy()
+    {
+        CharacterSkinChanger.CharacterChanged -= OnCharacterChanged;
+    }
+
+    private void OnCharacterChanged(vThirdPersonInput input)
+    {
+        _playerVThirdPersonController = input.GetComponent<vThirdPersonController>();
+        _playerVShooterMeleeInput = input.GetComponent<vShooterMeleeInput>();
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P) && _pauseAvailable)
-            SetPause(true);
+        if(Input.GetKeyDown(KeyCode.O))
+            ChangedPause();
     }
 
     public void SetPauseAvailable(bool available) => _pauseAvailable = available;
@@ -41,9 +54,7 @@ public class PauseController : MonoBehaviour
         _enemySpawner.StopWork();
 
         if(setActiveUI)
-        {
             _winCanvas.SetActive(true);
-        }
         
         _playerVShooterMeleeInput.SetLockAllInput(true);
 
@@ -72,13 +83,13 @@ public class PauseController : MonoBehaviour
     {
         print("ChangedPause");
 
-        if(_pauseAvailable)
+        if(_pauseAvailable == false)
         {
-            SetPause(true);
+            TakeOfPause(true);
             return;
         }
 
-        TakeOfPause(true);
+        SetPause(true);
     }
 
     public void SetAdsPause(bool unlockCursor)

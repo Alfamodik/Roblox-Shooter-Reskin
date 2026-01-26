@@ -52,7 +52,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 15
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5601618988513370493
 MonoBehaviour:
@@ -853,6 +853,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8582078515383526195}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a70449ea3cb0a4f478c262989deb66c0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2267159716568268119}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a70449ea3cb0a4f478c262989deb66c0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8230014857652832496}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a70449ea3cb0a4f478c262989deb66c0,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3995282554580512095}
     - targetCorrespondingSourceObject: {fileID: 1766376526291797888, guid: a70449ea3cb0a4f478c262989deb66c0,
         type: 3}
       insertIndex: -1
@@ -962,10 +974,10 @@ MonoBehaviour:
   openCloseWindow: 1
   selectedToolbar: 2
   _isDead: 1
-  _currentHealth: 100
+  _currentHealth: 250
   isImmortal: 0
   fillHealthOnStart: 1
-  _maxHealth: 100
+  _maxHealth: 250
   _healthRecovery: 10
   _healthRecoveryDelay: 0
   checkHealthEvents: []
@@ -977,7 +989,19 @@ MonoBehaviour:
       m_Calls: []
   _onDead:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8230014857652832496}
+        m_TargetAssemblyTypeName: Zombe, Assembly-CSharp
+        m_MethodName: OnDie
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onChangeHealth:
     m_PersistentCalls:
       m_Calls: []
@@ -1039,8 +1063,8 @@ MonoBehaviour:
     m_Bits: 0
   sortTargetFromDistance: 0
   fieldOfView: 360
-  maxDetectDistance: 15
-  minDetectDistance: 5
+  maxDetectDistance: 10
+  minDetectDistance: 3
   distanceToLostTarget: 1
   chaseStopDistance: 0
   drawAgentPath: 0
@@ -1231,6 +1255,82 @@ MonoBehaviour:
   defaultStaminaRecoveryDelay: 1
   defaultDefenseRate: 100
   defaultDefenseRange: 90
+--- !u!114 &-2267159716568268119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790530894589872779}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a6ee24d8c766042b403d33a08151b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openCloseEvents: 0
+  openCloseWindow: 1
+  selectedToolbar: 0
+  damage:
+    damageValue: 15
+    staminaBlockCost: 5
+    staminaRecoveryDelay: 1
+    ignoreDefense: 0
+    activeRagdoll: 0
+    senselessTime: 0
+    sender: {fileID: 0}
+    receiver: {fileID: 0}
+    hitPosition: {x: 0, y: 0, z: 0}
+    hitReaction: 1
+    recoil_id: 0
+    reaction_id: 0
+    damageType: 
+    force: {x: 0, y: 0, z: 0}
+  overrideDamageSender: {fileID: 0}
+  layerToCollide:
+    serializedVersion: 2
+    m_Bits: 0
+  tags:
+    tags: []
+  continuousDamage: 0
+  damageFrequency: 0.5
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onSendDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionMethod: 0
+  part: {fileID: 0}
+  limitParticleCollisionEvent: 0
+  maxParticleCollisionEvent: 1
+--- !u!114 &8230014857652832496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790530894589872779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0be2aa0e8d75d4c8f3a199b802a7f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _removeAfterDeatg: 1
+  _removabelTime: 2.5
+--- !u!114 &3995282554580512095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4790530894589872779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed5b7055a94598479873eb05e1850da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 7510186064529662574, guid: 4856e02b43b9dbe44bce1be3b188a357, type: 3}
+  _transform: {fileID: 5273911818310389809}
 --- !u!4 &5273911818310389809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a70449ea3cb0a4f478c262989deb66c0,

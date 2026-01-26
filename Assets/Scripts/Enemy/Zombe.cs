@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(vObjectDamage))]
-public class Zombe : MonoBehaviour, IEnemy, IPauseble
+public class Zombe : MonoBehaviour, IEnemy, IPausable
 {
     public event Action<IEnemy> IDie;
 
@@ -12,17 +12,18 @@ public class Zombe : MonoBehaviour, IEnemy, IPauseble
     [SerializeField] private float _removabelTime;
 
     private vSimpleMeleeAI_Controller _controller;
-    private bool _onPause;
+    
+    public bool OnPause { get; private set; }
 
     private void Awake()
     {
         _controller = GetComponent<vSimpleMeleeAI_Controller>();
-        //PauseHandler.Add(this); zxc
+        PauseHandler.Add(this);
     }
 
     private void Update()
     {
-        if(_onPause)
+        if(OnPause)
             _controller.lockMovement = true;
         else
             _controller.lockMovement = false;
@@ -38,7 +39,9 @@ public class Zombe : MonoBehaviour, IEnemy, IPauseble
             Destroy(gameObject, _removabelTime);
     }
 
-    public void SetPause(bool isPause) => _onPause = isPause;
+    public void Pause() => OnPause = true;
+
+    public void Play() => OnPause = false;
 
     public void Kill() => Destroy(gameObject);
 }

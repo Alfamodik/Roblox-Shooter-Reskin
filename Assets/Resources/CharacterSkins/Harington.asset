@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   <Prefab>k__BackingField: {fileID: 212225918979167917, guid: bcafbd7343e211c4cba5c8485321c6e4,
     type: 3}
-  <Image>k__BackingField: {fileID: 21300000, guid: 6fc987e7070ef78479c61df64d33687e,
+  <Image>k__BackingField: {fileID: 21300000, guid: 29ab020c453e16042b26c52e5017d883,
     type: 3}
   <Price>k__BackingField: 0
   <SerialNumber>k__BackingField: 1
