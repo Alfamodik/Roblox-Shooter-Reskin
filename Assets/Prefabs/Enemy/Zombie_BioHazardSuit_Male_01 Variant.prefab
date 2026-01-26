@@ -68,7 +68,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -208,7 +208,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -280,7 +280,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -352,7 +352,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -850,7 +850,7 @@ MonoBehaviour:
   selectedToolbar: 0
   attackObjectName: RightLowerLeg
   damage:
-    damageValue: 15
+    damageValue: 10
     staminaBlockCost: 5
     staminaRecoveryDelay: 1
     ignoreDefense: 0
@@ -926,7 +926,7 @@ MonoBehaviour:
   selectedToolbar: 0
   attackObjectName: LeftLowerLeg
   damage:
-    damageValue: 15
+    damageValue: 10
     staminaBlockCost: 5
     staminaRecoveryDelay: 1
     ignoreDefense: 0
@@ -990,7 +990,7 @@ MonoBehaviour:
   selectedToolbar: 0
   attackObjectName: RightLowerArm
   damage:
-    damageValue: 15
+    damageValue: 10
     staminaBlockCost: 5
     staminaRecoveryDelay: 1
     ignoreDefense: 0
@@ -1048,7 +1048,7 @@ MonoBehaviour:
   selectedToolbar: 0
   attackObjectName: LeftLowerArm
   damage:
-    damageValue: 15
+    damageValue: 10
     staminaBlockCost: 5
     staminaRecoveryDelay: 1
     ignoreDefense: 0
@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 6
+  selectedToolbar: 3
   _isDead: 1
   _currentHealth: 100
   isImmortal: 0
