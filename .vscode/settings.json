@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Roblox-Reskin.sln"
+    "dotnet.defaultSolution": "Roblox-Shooter-Reskin.sln"
 }
