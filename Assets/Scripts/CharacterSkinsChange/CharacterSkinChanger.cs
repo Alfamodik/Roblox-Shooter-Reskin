@@ -23,8 +23,7 @@ public class CharacterSkinChanger : MonoBehaviour
         Vector3 position = CurrentCharacter != null ? CurrentCharacter.transform.position : transform.position;
         Quaternion rotation = CurrentCharacter != null ? CurrentCharacter.transform.rotation : transform.rotation;
         
-        if (CurrentCharacter != null)
-            Destroy(CurrentCharacter.gameObject);
+        Destroy(CurrentCharacter.gameObject);
 
         GameObject newCharacter = Instantiate(characterSkinItem.Prefab, position, rotation);
         CurrentCharacter = newCharacter.GetComponent<vThirdPersonController>();

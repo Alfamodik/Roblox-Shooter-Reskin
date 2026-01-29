@@ -102,7 +102,7 @@ public class Shop : MonoBehaviour
     public void Initialize(IDataProvider dataProvider, OpenSkinsChecker openSkinsChecker, SelectedSkinChecker selectedSkinChecker, SkinSelector skinSelector, SkinUnlocker skinUnlocker, CharacterSkinChanger characterSkinChanger)
     {
         _selectedSkinChecker = selectedSkinChecker;
-        _openSkinsChecker = openSkinsChecker;   
+        _openSkinsChecker = openSkinsChecker;
         _skinSelector = skinSelector;
         _skinUnlocker = skinUnlocker;
         _characterSkinChanger = characterSkinChanger;
@@ -120,13 +120,28 @@ public class Shop : MonoBehaviour
         _shopPanel.ItemViewClicked += OnItemViewClicked;
         _closeButton.onClick.AddListener(Close);
 
-        //_characterSkinChanger.WeaponSlotChanged += UpdateWeaponSlot;
+        //LoadSelectedSkins();
     }
 
-    private void UpdateWeaponSlot(WeaponSlot weaponSlot)
+    private void LoadSelectedSkins()
     {
-        _weaponSlot = weaponSlot;
-        _skinEquipper.Reinitialize(_weaponSlot);
+        CharacterSkinItem selectedCharacter = _contentItems.CharacterSkinItems.FirstOrDefault(item =>
+        {
+            _selectedSkinChecker.Visit(item);
+            return _selectedSkinChecker.IsSelected;
+        });
+
+        if (selectedCharacter != null)
+            _skinEquipper.Visit(selectedCharacter);
+
+        WeaponSkinItem selectedWeapon = _contentItems.WeaponSkinItems.FirstOrDefault(item =>
+        {
+            _selectedSkinChecker.Visit(item);
+            return _selectedSkinChecker.IsSelected;
+        });
+
+        if (selectedWeapon != null)
+            _skinEquipper.Visit(selectedWeapon);
     }
 
     public void Open()
