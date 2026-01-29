@@ -37,8 +37,8 @@ public class PauseController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O))
-            ChangedPause();
+        /*if(Input.GetKeyDown(KeyCode.O))
+            ChangedPause();*/
     }
 
     public void SetPauseAvailable(bool available) => _pauseAvailable = available;

@@ -44,6 +44,9 @@ public class Shop : MonoBehaviour
     [SerializeField] private Transform _petCategoryCameraPosition;
     [SerializeField] private Transform _weaponCategoryCameraPosition;
 
+    [Space]
+    [SerializeField] private PauseController _pauseController;
+
     private WeaponSlot _weaponSlot;
     private SkinFinder _skinFinder;
     private IDataProvider _dataProvider;
@@ -96,12 +99,13 @@ public class Shop : MonoBehaviour
         YG2.onPurchaseSuccess -= GiveSkinByCode;
     }
 
-    public void Initialize(IDataProvider dataProvider, OpenSkinsChecker openSkinsChecker, SelectedSkinChecker selectedSkinChecker, SkinSelector skinSelector, SkinUnlocker skinUnlocker)
+    public void Initialize(IDataProvider dataProvider, OpenSkinsChecker openSkinsChecker, SelectedSkinChecker selectedSkinChecker, SkinSelector skinSelector, SkinUnlocker skinUnlocker, CharacterSkinChanger characterSkinChanger)
     {
         _selectedSkinChecker = selectedSkinChecker;
         _openSkinsChecker = openSkinsChecker;   
         _skinSelector = skinSelector;
         _skinUnlocker = skinUnlocker;
+        _characterSkinChanger = characterSkinChanger;
 
         _skinEquipper = new SkinEquipper(_characterSkinChanger, _weaponSlot);
         _skinFinder = new SkinFinder(_contentItems);
@@ -130,8 +134,9 @@ public class Shop : MonoBehaviour
         IsOpen = true;
 
         _shopCanvas.SetActive(true);
-        PauseHandler.Pause();
-        
+        //PauseHandler.Pause();
+        _pauseController.SetPause(true);
+
         if (_cursorController != null)
             _cursorController.UnlockCursor();
 
@@ -143,7 +148,8 @@ public class Shop : MonoBehaviour
         IsOpen = false;
         
         _shopCanvas.SetActive(false);
-        PauseHandler.Play();
+        //PauseHandler.Play();
+        _pauseController.TakeOfPause(true);
         
         if (_cursorController != null)
             _cursorController.LockCursor();

@@ -19296,7 +19296,7 @@ MonoBehaviour:
   BalanceChanged:
     m_PersistentCalls:
       m_Calls: []
-  _setDefaultSavesOnAwake: 1
+  _setDefaultSavesOnAwake: 0
 --- !u!4 &426411099
 Transform:
   m_ObjectHideFlags: 0
@@ -52988,6 +52988,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2788782124884968789, guid: 264c4a76f8e935442bcd51e73af9b012,
+        type: 3}
+      propertyPath: _contentItems
+      value: 
+      objectReference: {fileID: 11400000, guid: d2208dae47a2ea940add8b54b5c7f9f9,
+        type: 2}
+    - target: {fileID: 2788782124884968789, guid: 264c4a76f8e935442bcd51e73af9b012,
+        type: 3}
+      propertyPath: _characterSkinChanger
+      value: 
+      objectReference: {fileID: 1004673073}
     - target: {fileID: 3074980506733608673, guid: 264c4a76f8e935442bcd51e73af9b012,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -52998,6 +53009,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -200
       objectReference: {fileID: 0}
+    - target: {fileID: 3284450354356057228, guid: 264c4a76f8e935442bcd51e73af9b012,
+        type: 3}
+      propertyPath: _pauseController
+      value: 
+      objectReference: {fileID: 1673964241}
     - target: {fileID: 3284450354356057228, guid: 264c4a76f8e935442bcd51e73af9b012,
         type: 3}
       propertyPath: _cursorController

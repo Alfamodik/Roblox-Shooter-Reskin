@@ -8,7 +8,7 @@
         false,
         false
     ],
-    "idSave": 79,
+    "idSave": 102,
     "SkinsDataInitialized": true,
     "SelectedCharacterSkin": 0,
     "SelectedMazeSkin": 0,
@@ -17,7 +17,6 @@
     "SelectedWeaponSkin": 2,
     "OpenCharacterSkins": [
         1,
-        4,
         2,
         0
     ],
@@ -31,9 +30,7 @@
     "OpenWeaponSkins": [
         0,
         2,
-        4,
-        1,
-        3
+        4
     ],
     "СurrentToolId": 0,
     "Balance": 0

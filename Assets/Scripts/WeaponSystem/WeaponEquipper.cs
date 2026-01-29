@@ -1,7 +1,8 @@
 using Invector.vItemManager;
+using System.Collections;
 using UnityEngine;
 
-public class WeaponEquipper : MonoBehaviour
+public class WeaponEquipper
 {
     private vItemManager _itemManager;
     private CharacterSkinChanger _characterSkinChanger;
@@ -14,30 +15,18 @@ public class WeaponEquipper : MonoBehaviour
     public void Equip(int invectorId)
     {
         _itemManager = _characterSkinChanger.CurrentCharacter.GetComponent<vItemManager>();
+        _characterSkinChanger.StartCoroutine(EquipCoroutine(invectorId));
+    }
 
-        if (TryEquip(invectorId))
-         return;
-
+    private IEnumerator EquipCoroutine(int invectorId)
+    {
+        yield return null;
+        
+        _itemManager.DestroyAllItems();
         _itemManager.AddItem(new ItemReference(invectorId)
         {
             amount = 1,
             addToEquipArea = true,
         });
-
-        TryEquip(invectorId);
-    }
-
-    private bool TryEquip(int invectorId)
-    {
-        foreach (vItem item in _itemManager.inventory.items)
-        {
-            if (item.id == invectorId)
-            {
-                _itemManager.EquipItemToEquipSlot(0, 1, item, true);
-                return true;
-            }
-        }
-
-        return false;
     }
 }
