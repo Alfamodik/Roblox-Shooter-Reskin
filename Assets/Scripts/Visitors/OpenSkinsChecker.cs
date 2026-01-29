@@ -29,6 +29,10 @@ public class OpenSkinsChecker : IShopItemVisitor
                 Visit(shopItem as PetSkinItem);
                 break;
 
+            case WeaponSkinItem:
+                Visit(shopItem as WeaponSkinItem);
+                break;
+
             default:
                 throw new NotImplementedException();
         }
@@ -47,4 +51,7 @@ public class OpenSkinsChecker : IShopItemVisitor
 
     public void Visit(PetSkinItem petSkinItem)
         => IsOpened = _persistentData.PlayerData.OpenPetSkins.Contains(petSkinItem.SkinType);
+
+    public void Visit(WeaponSkinItem weaponSkinItem)
+        => IsOpened = _persistentData.PlayerData.OpenWeaponSkins.Contains(weaponSkinItem.SkinType);
 }

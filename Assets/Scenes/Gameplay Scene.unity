@@ -19296,7 +19296,7 @@ MonoBehaviour:
   BalanceChanged:
     m_PersistentCalls:
       m_Calls: []
-  _setDefaultSavesOnAwake: 0
+  _setDefaultSavesOnAwake: 1
 --- !u!4 &426411099
 Transform:
   m_ObjectHideFlags: 0
@@ -36680,6 +36680,12 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!4 &965490505 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5048567565176773800, guid: 264c4a76f8e935442bcd51e73af9b012,
+    type: 3}
+  m_PrefabInstance: {fileID: 1280499126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &967419892
 GameObject:
   m_ObjectHideFlags: 0
@@ -38179,7 +38185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916bba910d3e69b4e9a8564518118276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentCharacter: {fileID: 500497466}
+  <CurrentCharacter>k__BackingField: {fileID: 500497466}
 --- !u!4 &1004673074
 Transform:
   m_ObjectHideFlags: 0
@@ -43631,9 +43637,9 @@ MonoBehaviour:
       de: 
       hi: 
   text: 
-  ru: "\u041F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0438"
-  en: Characters
-  tr: 
+  ru: "\u041E\u0440\u0443\u0436\u0438\u0435"
+  en: Weapon
+  tr: Silah
   az: 
   be: 
   he: 
@@ -43663,9 +43669,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 2/2 completed
+  processTranslateLabel: 3/3 completed
   componentTextField: 1
-  countLang: 2
+  countLang: 3
 --- !u!114 &1079471064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50248,6 +50254,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7634070843528584267, guid: cc451655639b4f44fa217d7ef21fb43d,
+        type: 3}
+      propertyPath: selectedToolbar
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -53002,6 +53013,11 @@ PrefabInstance:
       propertyPath: _characterSkinChanger
       value: 
       objectReference: {fileID: 1004673073}
+    - target: {fileID: 3284450354356057228, guid: 264c4a76f8e935442bcd51e73af9b012,
+        type: 3}
+      propertyPath: _weaponCategoryCameraPosition
+      value: 
+      objectReference: {fileID: 965490505}
     - target: {fileID: 3398912595686070966, guid: 264c4a76f8e935442bcd51e73af9b012,
         type: 3}
       propertyPath: m_SizeDelta.y

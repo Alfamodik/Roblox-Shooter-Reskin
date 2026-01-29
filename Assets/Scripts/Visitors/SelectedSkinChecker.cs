@@ -28,6 +28,10 @@ public class SelectedSkinChecker : IShopItemVisitor
                 Visit(shopItem as PetSkinItem);
                 break;
 
+            case WeaponSkinItem:
+                Visit(shopItem as WeaponSkinItem);
+                break;
+
             default:
                 throw new NotImplementedException();
         }
@@ -46,4 +50,7 @@ public class SelectedSkinChecker : IShopItemVisitor
 
     public void Visit(PetSkinItem petSkinItem)
         => IsSelected = _persistentData.PlayerData.SelectedPetSkin == petSkinItem.SkinType;
+
+    public void Visit(WeaponSkinItem weaponSkinItem)
+        => IsSelected = _persistentData.PlayerData.SelectedWeaponSkin == weaponSkinItem.SkinType;
 }

@@ -6,18 +6,18 @@ public class CharacterSkinChanger : MonoBehaviour
 {
     public static event Action<vThirdPersonInput> CharacterChanged;
     
-    [SerializeField] private vThirdPersonController _currentCharacter;
+    [field: SerializeField] public vThirdPersonController CurrentCharacter { get; private set; }
 
     public void Set(CharacterSkinItem characterSkinItem)
     {
-        Vector3 position = _currentCharacter != null ? _currentCharacter.transform.position : transform.position;
-        Quaternion rotation = _currentCharacter != null ? _currentCharacter.transform.rotation : transform.rotation;
+        Vector3 position = CurrentCharacter != null ? CurrentCharacter.transform.position : transform.position;
+        Quaternion rotation = CurrentCharacter != null ? CurrentCharacter.transform.rotation : transform.rotation;
         
-        if (_currentCharacter != null)
-            Destroy(_currentCharacter.gameObject);
+        if (CurrentCharacter != null)
+            Destroy(CurrentCharacter.gameObject);
 
         GameObject newCharacter = Instantiate(characterSkinItem.Prefab, position, rotation);
-        _currentCharacter = newCharacter.GetComponent<vThirdPersonController>();
+        CurrentCharacter = newCharacter.GetComponent<vThirdPersonController>();
         
         vThirdPersonInput input = newCharacter.GetComponent<vThirdPersonInput>();
         input.unlockCursorOnStart = true;

@@ -34,6 +34,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 53537e18ee05d6a42ba6575076302208, type: 2}
   - {fileID: 11400000, guid: 01af781c085a0224b87d0fa7a4c8dc6a, type: 2}
   - {fileID: 11400000, guid: 28bb4bb73c5f95b4790f8536130ce54c, type: 2}
+  _weaponSkinItems:
+  - {fileID: 11400000, guid: 45adf25e65a9e6244ae6b01c576c542a, type: 2}
+  - {fileID: 11400000, guid: 3c30b5fe58e505e4da60fd7829d2e217, type: 2}
+  - {fileID: 11400000, guid: 8ffeec4e3878c0f42a7bb9d1cdf78752, type: 2}
+  - {fileID: 11400000, guid: 082e9a851894d6d4a82f0a81181eeadd, type: 2}
+  - {fileID: 11400000, guid: 2db89d9303e4c9641a45656b12cba95c, type: 2}
   _petSkinItems:
   - {fileID: 11400000, guid: c21254163b4d8e44582324afb4f5965a, type: 2}
   - {fileID: 11400000, guid: f2d8268fc5db2e54d92fbb87b682992e, type: 2}

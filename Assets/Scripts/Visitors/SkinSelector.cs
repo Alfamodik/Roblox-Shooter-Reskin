@@ -26,6 +26,10 @@ public class SkinSelector : IShopItemVisitor
                 Visit(shopItem as PetSkinItem);
                 break;
 
+            case WeaponSkinItem:
+                Visit(shopItem as WeaponSkinItem);
+                break;
+
             default:
                 throw new NotImplementedException();
         }
@@ -44,4 +48,7 @@ public class SkinSelector : IShopItemVisitor
 
     public void Visit(PetSkinItem petSkinItem)
         => _persistentData.PlayerData.SelectedPetSkin = petSkinItem.SkinType;
+
+    public void Visit(WeaponSkinItem weaponSkinItem)
+        => _persistentData.PlayerData.SelectedWeaponSkin = weaponSkinItem.SkinType;
 }

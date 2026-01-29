@@ -8,11 +8,13 @@ public class PlayerData
     private MazeSkins _selectedMazeSkin;
     private ToolSkins _selectedToolSkin;
     private PetSkins _selectedPetSkin;
+    private WeaponSkins _selectedWeaponSkin;
 
     private readonly List<CharacterSkins> _openCharacterSkins;
     private readonly List<MazeSkins> _openMazeSkins;
     private readonly List<ToolSkins> _openToolSkins;
     private readonly List<PetSkins> _openPetSkins;
+    private readonly List<WeaponSkins> _openWeaponSkins;
 
     public PlayerData(bool setDefaultValues = true)
     {
@@ -20,11 +22,13 @@ public class PlayerData
         _selectedMazeSkin = MazeSkins.Green;
         _selectedToolSkin = ToolSkins.LightweightAxe;
         //_selectedPetSkin = PetSkins.BabyDragon1;
+        _selectedWeaponSkin = WeaponSkins.HandGun;
 
         _openCharacterSkins = new List<CharacterSkins>();
         _openMazeSkins = new List<MazeSkins>();
         _openToolSkins = new List<ToolSkins>();
         _openPetSkins = new List<PetSkins>();
+        _openWeaponSkins = new List<WeaponSkins>();
 
         if (setDefaultValues)
         {
@@ -32,6 +36,7 @@ public class PlayerData
             _openMazeSkins.Add(_selectedMazeSkin);
             _openToolSkins.Add(_selectedToolSkin);
             //_openPetSkins.Add(_selectedPetSkin);
+            _openWeaponSkins.Add(_selectedWeaponSkin);
         }
     }
 
@@ -83,6 +88,18 @@ public class PlayerData
         }
     }
 
+    public WeaponSkins SelectedWeaponSkin
+    {
+        get => _selectedWeaponSkin;
+        set
+        {
+            if (_openWeaponSkins.Contains(_selectedWeaponSkin) == false)
+                throw new ArgumentException(nameof(value));
+
+            _selectedWeaponSkin = value;
+        }
+    }
+
     public IEnumerable<CharacterSkins> OpenCharacterSkins => _openCharacterSkins;
 
     public IEnumerable<MazeSkins> OpenMazeSkins => _openMazeSkins;
@@ -90,6 +107,8 @@ public class PlayerData
     public IEnumerable<ToolSkins> OpenToolSkins => _openToolSkins;
 
     public IEnumerable<PetSkins> OpenPetSkins => _openPetSkins;
+
+    public IEnumerable<WeaponSkins> OpenWeaponSkins => _openWeaponSkins;
 
     public void OpenCharacterSkin(CharacterSkins skin)
     {
@@ -125,5 +144,14 @@ public class PlayerData
             //throw new ArgumentException(nameof(skin));
 
         _openPetSkins.Add(skin);
+    }
+
+    public void OpenWeaponSkin(WeaponSkins skin)
+    {
+        if (_openWeaponSkins.Contains(skin))
+            Debug.LogWarning($"Dublicate {nameof(skin)}: {skin} in {nameof(_openWeaponSkins)}");
+        //throw new ArgumentException(nameof(skin));
+
+        _openWeaponSkins.Add(skin);
     }
 }

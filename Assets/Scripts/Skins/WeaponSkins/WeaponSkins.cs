@@ -1,6 +1,8 @@
 public enum WeaponSkins
 {
-    pistol,
-    p90,
+    HandGun,
+    Riffle,
+    Shotgun,
+    M16,
     ak47,
 }

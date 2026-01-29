@@ -26,6 +26,10 @@ public class SkinUnlocker : IShopItemVisitor
                 Visit(shopItem as PetSkinItem);
                 break;
 
+            case WeaponSkinItem:
+                Visit(shopItem as WeaponSkinItem);
+                break;
+
             default:
                 throw new NotImplementedException();
         }
@@ -42,6 +46,9 @@ public class SkinUnlocker : IShopItemVisitor
     public void Visit(ToolSkinItem toolSkinItem)
         => _persistentData.PlayerData.OpenToolSkin(toolSkinItem.SkinType);
 
-    public void Visit(PetSkinItem peteSkinItem)
-        => _persistentData.PlayerData.OpenPetSkin(peteSkinItem.SkinType);
+    public void Visit(PetSkinItem petSkinItem)
+        => _persistentData.PlayerData.OpenPetSkin(petSkinItem.SkinType);
+
+    public void Visit(WeaponSkinItem weaponSkinItem)
+        => _persistentData.PlayerData.OpenWeaponSkin(weaponSkinItem.SkinType);
 }

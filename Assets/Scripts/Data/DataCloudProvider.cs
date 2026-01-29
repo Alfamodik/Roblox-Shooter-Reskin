@@ -16,11 +16,13 @@ public class DataCloudProvider : IDataProvider
         YG2.saves.SelectedMazeSkin = (int)PlayerData.SelectedMazeSkin;
         YG2.saves.SelectedToolSkin = (int)PlayerData.SelectedToolSkin;
         //YG2.saves.SelectedPetSkin = (int)PlayerData.SelectedPetSkin;
+        YG2.saves.SelectedWeaponSkin = (int)PlayerData.SelectedWeaponSkin;
 
         YG2.saves.OpenCharacterSkins = PlayerData.OpenCharacterSkins.Select(skins => (int)skins).ToList();
         YG2.saves.OpenMazeSkins = PlayerData.OpenMazeSkins.Select(skins => (int)skins).ToList();
         YG2.saves.OpenToolSkins = PlayerData.OpenToolSkins.Select(skins => (int)skins).ToList();
         YG2.saves.OpenPetSkins = PlayerData.OpenPetSkins.Select(skins => (int)skins).ToList();
+        YG2.saves.OpenWeaponSkins = PlayerData.OpenWeaponSkins.Select(skins => (int)skins).ToList();
 
         YG2.saves.SkinsDataInitialized = true;
         YG2.SaveProgress();
@@ -45,10 +47,14 @@ public class DataCloudProvider : IDataProvider
         foreach (var skin in YG2.saves.OpenPetSkins.Select(skins => (PetSkins)skins))
             PlayerData.OpenPetSkin(skin);
 
+        foreach (var skin in YG2.saves.OpenWeaponSkins.Select(skins => (WeaponSkins)skins))
+            PlayerData.OpenWeaponSkin(skin);
+
         PlayerData.SelectedCharacterSkin = (CharacterSkins)YG2.saves.SelectedCharacterSkin;
         PlayerData.SelectedMazeSkin = (MazeSkins)YG2.saves.SelectedMazeSkin;
         PlayerData.SelectedToolSkin = (ToolSkins)YG2.saves.SelectedToolSkin;
         //PlayerData.SelectedPetSkin = (PetSkins)YG2.saves.SelectedPetSkin;
+        PlayerData.SelectedWeaponSkin = (WeaponSkins)YG2.saves.SelectedWeaponSkin;
 
         return true;
     }
@@ -64,10 +70,12 @@ namespace YG
         public int SelectedMazeSkin;
         public int SelectedToolSkin;
         public int SelectedPetSkin;
-        
+        public int SelectedWeaponSkin;
+
         public List<int> OpenCharacterSkins;
         public List<int> OpenMazeSkins;
         public List<int> OpenToolSkins;
         public List<int> OpenPetSkins;
+        public List<int> OpenWeaponSkins;
     }
 }

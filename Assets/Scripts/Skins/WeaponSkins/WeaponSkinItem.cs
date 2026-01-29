@@ -4,4 +4,6 @@ using UnityEngine;
 public class WeaponSkinItem : ShopItem
 {
     [field: SerializeField] public WeaponSkins SkinType { get; private set; }
+
+    [field: SerializeField] public int InvectorId { get; private set; }
 }

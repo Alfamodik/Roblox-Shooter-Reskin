@@ -5,4 +5,5 @@ public interface IShopItemVisitor
     void Visit(MazeSkinItem mazeSkinItem);
     void Visit(ToolSkinItem toolSkinItem);
     void Visit(PetSkinItem petSkinItem);
+    void Visit(WeaponSkinItem petSkinItem);
 }

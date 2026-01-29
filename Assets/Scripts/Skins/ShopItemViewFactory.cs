@@ -57,6 +57,10 @@ public class ShopItemViewFactory : ScriptableObject
                     Visit(shopItem as PetSkinItem);
                     break;
 
+                case WeaponSkinItem:
+                    Visit(shopItem as WeaponSkinItem);
+                    break;
+
                 default:
                     throw new NotImplementedException();
             }
@@ -71,5 +75,7 @@ public class ShopItemViewFactory : ScriptableObject
         public void Visit(ToolSkinItem mazeSkinItem) => Prefab = _toolSkinItemPrefab;
 
         public void Visit(PetSkinItem mazeSkinItem) => Prefab = _petSkinItemPrefab;
+
+        public void Visit(WeaponSkinItem mazeSkinItem) => Prefab = _petSkinItemPrefab;
     }
 }
