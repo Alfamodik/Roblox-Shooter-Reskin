@@ -22335,15 +22335,7 @@ MonoBehaviour:
   selectedToolbar: 0
   inventory: {fileID: 0}
   itemListData: {fileID: 11400000, guid: fbbb7e4e48e07c442ac1999abd7aadc6, type: 2}
-  startItems:
-  - id: 11
-    name: 
-    amount: 1
-    attributes: []
-    changeAttributes: 0
-    autoEquip: 1
-    addToEquipArea: 1
-    indexArea: 0
+  startItems: []
   equipPoints:
   - equipPointName: LeftArm
     area: {fileID: 0}

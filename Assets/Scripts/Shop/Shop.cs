@@ -120,7 +120,7 @@ public class Shop : MonoBehaviour
         _shopPanel.ItemViewClicked += OnItemViewClicked;
         _closeButton.onClick.AddListener(Close);
 
-        //LoadSelectedSkins();
+        LoadSelectedSkins();
     }
 
     private void LoadSelectedSkins()

@@ -21,8 +21,13 @@ public class WeaponEquipper
     private IEnumerator EquipCoroutine(int invectorId)
     {
         yield return null;
+        yield return null;
         
         _itemManager.DestroyAllItems();
+        
+        yield return null;
+        yield return null;
+
         _itemManager.AddItem(new ItemReference(invectorId)
         {
             amount = 1,

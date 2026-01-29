@@ -6,8 +6,10 @@ using UnityEngine;
 public class CharacterSkinChanger : MonoBehaviour
 {
     public static event Action<vThirdPersonInput> CharacterChanged;
-    
-    [field: SerializeField] public vThirdPersonController CurrentCharacter { get; private set; }
+
+    [SerializeField] private Transform _spawnPoint;
+
+    [field: NonSerialized] public vThirdPersonController CurrentCharacter { get; private set; }
 
     private IPersistentData _persistentData;
     private ShopContent _shopContent;
@@ -20,17 +22,19 @@ public class CharacterSkinChanger : MonoBehaviour
 
     public void Set(CharacterSkinItem characterSkinItem)
     {
-        Vector3 position = CurrentCharacter != null ? CurrentCharacter.transform.position : transform.position;
-        Quaternion rotation = CurrentCharacter != null ? CurrentCharacter.transform.rotation : transform.rotation;
+        bool isFirstSpawn = CurrentCharacter == null;
+        Vector3 position = CurrentCharacter != null ? CurrentCharacter.transform.position : _spawnPoint.position;
+        Quaternion rotation = CurrentCharacter != null ? CurrentCharacter.transform.rotation : _spawnPoint.rotation;
         
-        Destroy(CurrentCharacter.gameObject);
+        if (!isFirstSpawn)
+            Destroy(CurrentCharacter.gameObject);
 
         GameObject newCharacter = Instantiate(characterSkinItem.Prefab, position, rotation);
         CurrentCharacter = newCharacter.GetComponent<vThirdPersonController>();
         
         vThirdPersonInput input = newCharacter.GetComponent<vThirdPersonInput>();
-        input.unlockCursorOnStart = true;
-        input.showCursorOnStart = true;
+        input.unlockCursorOnStart = !isFirstSpawn;
+        input.showCursorOnStart = !isFirstSpawn;
         
         var weaponItem = _shopContent.WeaponSkinItems.FirstOrDefault(w => w.SkinType == _persistentData.PlayerData.SelectedWeaponSkin);
         var weaponEquipper = new WeaponEquipper(this);

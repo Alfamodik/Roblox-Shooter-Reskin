@@ -14,13 +14,13 @@ public class DeviceTypeBootstrap : MonoBehaviour
         {
             _mobileUI.SetActive(true);
             _desktopUI.SetActive(false);
-            LockUnlockCursor.ShowCursor(_VShooterMeleeInput);
+            //LockUnlockCursor.ShowCursor(_VShooterMeleeInput);
         }
         else
         {
             _mobileUI.SetActive(false);
             _desktopUI.SetActive(true);
-            LockUnlockCursor.HideCursor(_VShooterMeleeInput);
+            //LockUnlockCursor.HideCursor(_VShooterMeleeInput);
         }
     }
 }
