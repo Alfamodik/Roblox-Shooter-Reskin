@@ -22935,7 +22935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 3
+  selectedToolbar: 1
   weaponCategory: Rifle
   _shootFrequency: 0.15
   isInfinityAmmo: 1
@@ -23002,7 +23002,7 @@ MonoBehaviour:
   automaticWeapon: 1
   reloadTime: 1
   reloadOneByOne: 0
-  _clipSize: 30
+  _clipSize: 999
   dontUseReload: 1
   autoReload: 1
   autoReloadStyle: 2

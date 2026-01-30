@@ -3960,7 +3960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 1
+  selectedToolbar: 0
   weaponCategory: Rifle
   _shootFrequency: 0.15
   isInfinityAmmo: 1
@@ -4024,8 +4024,8 @@ MonoBehaviour:
   automaticWeapon: 1
   reloadTime: 0
   reloadOneByOne: 0
-  _clipSize: 999999
-  dontUseReload: 0
+  _clipSize: 999
+  dontUseReload: 1
   autoReload: 1
   autoReloadStyle: 2
   ammoID: 13

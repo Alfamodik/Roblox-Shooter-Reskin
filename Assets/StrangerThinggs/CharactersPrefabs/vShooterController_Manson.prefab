@@ -7130,7 +7130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
+  openCloseWindow: 1
   selectedToolbar: 0
   unlockCursorOnStart: 0
   showCursorOnStart: 0
@@ -7463,7 +7463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 1
+  selectedToolbar: 0
   canUseMeleeBlock_H: 0
   canUseMeleeWeakAttack_H: 1
   canUseMeleeStrongAttack_H: 1
@@ -7540,7 +7540,7 @@ MonoBehaviour:
   useRightIK: 1
   weaponIKAdjustList: {fileID: 11400000, guid: 053e843be07eec545804d67b9bd3c6b0, type: 2}
   ikAdjustSmooth: 20
-  allAmmoInfinity: 0
+  allAmmoInfinity: 1
   useAmmoDisplay: 1
   leftWeaponAmmoDisplayID: 1
   rightWeaponAmmoDisplayID: 1

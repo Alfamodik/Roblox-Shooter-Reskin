@@ -4,14 +4,7 @@ using YG;
 
 public class CursorController : MonoBehaviour
 {
-    [SerializeField] private bool _lockOnAwake = true;
-    [SerializeField] private vThirdPersonInput _characterInput;
-
-    private void Awake()
-    {
-        if (_lockOnAwake)
-            LockCursor();
-    }
+    private vThirdPersonInput _characterInput;
 
     private void OnEnable()
     {
@@ -30,6 +23,8 @@ public class CursorController : MonoBehaviour
 
     public void LockCursor()
     {
+        Debug.Log("LockCursor()");
+
         if (YG2.envir.isDesktop)
         {
             _characterInput.ShowCursor(false);
@@ -39,6 +34,7 @@ public class CursorController : MonoBehaviour
 
     public void UnlockCursor()
     {
+        Debug.Log("UnlockCursor()");
         _characterInput.ShowCursor(true);
         _characterInput.LockCursor(true);
     }

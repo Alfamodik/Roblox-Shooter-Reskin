@@ -13058,9 +13058,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 4
+  selectedToolbar: 1
   weaponCategory: Shotgun
-  _shootFrequency: 0.8
+  _shootFrequency: 0.5
   isInfinityAmmo: 1
   _ammo: 8
   ignoreTags: []
@@ -13127,7 +13127,7 @@ MonoBehaviour:
   reloadTime: 0
   reloadOneByOne: 0
   _clipSize: 999
-  dontUseReload: 0
+  dontUseReload: 1
   autoReload: 1
   autoReloadStyle: 2
   ammoID: 17

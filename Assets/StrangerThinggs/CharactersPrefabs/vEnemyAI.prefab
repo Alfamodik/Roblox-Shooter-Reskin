@@ -972,7 +972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 6
   _isDead: 1
   _currentHealth: 250
   isImmortal: 0
@@ -1317,6 +1317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _removeAfterDeatg: 1
   _removabelTime: 2.5
+  _reward: 100
 --- !u!114 &3995282554580512095
 MonoBehaviour:
   m_ObjectHideFlags: 0

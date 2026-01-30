@@ -8,19 +8,15 @@
         false,
         false
     ],
-    "idSave": 161,
+    "idSave": 254,
     "SkinsDataInitialized": true,
     "SelectedCharacterSkin": 1,
     "SelectedMazeSkin": 0,
     "SelectedToolSkin": 0,
     "SelectedPetSkin": 0,
-    "SelectedWeaponSkin": 3,
+    "SelectedWeaponSkin": 1,
     "OpenCharacterSkins": [
-        1,
-        2,
-        0,
-        3,
-        4
+        1
     ],
     "OpenMazeSkins": [
         0
@@ -31,11 +27,9 @@
     "OpenPetSkins": [],
     "OpenWeaponSkins": [
         0,
-        2,
-        4,
         3,
         1
     ],
     "СurrentToolId": 0,
-    "Balance": 0
+    "Balance": 600
 }

@@ -11,6 +11,9 @@ public class Zombe : MonoBehaviour, IEnemy, IPausable
     [SerializeField] private bool _removeAfterDeatg;
     [SerializeField] private float _removabelTime;
 
+    [Space]
+    [SerializeField] private int _reward;
+
     private vSimpleMeleeAI_Controller _controller;
     
     public bool OnPause { get; private set; }
@@ -31,6 +34,7 @@ public class Zombe : MonoBehaviour, IEnemy, IPausable
 
     public void OnDie()
     {
+        Wallet.Instance.Add(_reward, false);
         IDie?.Invoke(this);
 
         GetComponent<vObjectDamage>().damage.damageValue = 0;
