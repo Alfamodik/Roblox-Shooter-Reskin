@@ -15,7 +15,8 @@ MonoBehaviour:
   <PrewiewPrefab>k__BackingField: {fileID: 919132149155446097, guid: bf9ff1c95c35cfc4dbb20ee0d3fe2f48,
     type: 3}
   <Prefab>k__BackingField: {fileID: 0}
-  <Image>k__BackingField: {fileID: 0}
+  <Image>k__BackingField: {fileID: 21300000, guid: 04f1cd7f33661e3468bc3a7ea8b421e0,
+    type: 3}
   <Price>k__BackingField: 0
   <SerialNumber>k__BackingField: 0
   <PurchaseId>k__BackingField: Ak47

@@ -8,13 +8,13 @@
         false,
         false
     ],
-    "idSave": 152,
+    "idSave": 154,
     "SkinsDataInitialized": true,
-    "SelectedCharacterSkin": 4,
+    "SelectedCharacterSkin": 1,
     "SelectedMazeSkin": 0,
     "SelectedToolSkin": 0,
     "SelectedPetSkin": 0,
-    "SelectedWeaponSkin": 0,
+    "SelectedWeaponSkin": 2,
     "OpenCharacterSkins": [
         1,
         2,
