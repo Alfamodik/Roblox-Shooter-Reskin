@@ -14,7 +14,7 @@ public class WaveController : MonoBehaviour
         _enemySpawner = enemySpawner;
         _rankNotifier = rankNotifier;
 
-        _rankNotifier.OnRankUpgraded += CooldownWave;
+        //_rankNotifier.OnRankUpgraded += CooldownWave;
     }
 
     public void StartWork()

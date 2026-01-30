@@ -11851,8 +11851,8 @@ MonoBehaviour:
   _mobieMod: 0
   _pointToRankUpgrade: 5
   _addRequirementsRankUpgrade: 1
-  _desktopInstanceLimit: 10
-  _mobileInstanceLimit: 10
+  _desktopInstanceLimit: 25
+  _mobileInstanceLimit: 25
   _UIKilledEnemy: {fileID: 845946212}
   _enemySpawner: {fileID: 1789783268}
   _waveController: {fileID: 1789783270}
@@ -12120,8 +12120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 666aa23c3ca6033458a2ae6dfa9a5966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lockOnAwake: 0
-  _characterInput: {fileID: 0}
 --- !u!4 &1677509748
 Transform:
   m_ObjectHideFlags: 0

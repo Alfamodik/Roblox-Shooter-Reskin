@@ -1,4 +1,3 @@
-using GamePush;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -65,12 +64,12 @@ public class UnlockAfterWatch : MonoBehaviour, INotifyingOfWeaponAdvertisement
         }
 
 #if UNITY_EDITOR
-        StartAds();
-        EndAds(true);
+        /*StartAds();
+        EndAds(true);*/
 #endif
 
-        if(GP_Ads.IsRewardedAvailable())
-            GP_Ads.ShowRewarded("", AwardReward, StartAds, EndAds);
+        /*if(GP_Ads.IsRewardedAvailable())
+            GP_Ads.ShowRewarded("", AwardReward, StartAds, EndAds);*/
     }
 
     private void SetLitener(bool giveWeapon)
@@ -110,7 +109,7 @@ public class UnlockAfterWatch : MonoBehaviour, INotifyingOfWeaponAdvertisement
                 break;
 
             default:
-                throw new NotImplementedException("Данный метод не поддерживается!");
+                throw new NotImplementedException("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
         }
 
         _button.onClick.AddListener(() => _changeWeaponAlpha.SetWeaponAlpha(_weaponIndex));
@@ -119,7 +118,7 @@ public class UnlockAfterWatch : MonoBehaviour, INotifyingOfWeaponAdvertisement
 
     private void AwardReward(string value) { }
 
-    private void StartAds()
+    /*private void StartAds()
     {
         print("Start Rewarded Ads");
         _pauseController.SetAdsPause(false);
@@ -151,5 +150,5 @@ public class UnlockAfterWatch : MonoBehaviour, INotifyingOfWeaponAdvertisement
             WeaponSelected?.Invoke(_weaponIndex);
             WeaponAvailable?.Invoke(_weaponIndex);
         }
-    }
+    }*/
 }

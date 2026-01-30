@@ -6913,14 +6913,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 1
-  selectedToolbar: 2
+  selectedToolbar: 0
   _isDead: 1
   _currentHealth: 0
   isImmortal: 0
   fillHealthOnStart: 1
   _maxHealth: 100
-  _healthRecovery: 0
-  _healthRecoveryDelay: 0
+  _healthRecovery: 3
+  _healthRecoveryDelay: 1
   checkHealthEvents: []
   _onStartReceiveDamage:
     m_PersistentCalls:

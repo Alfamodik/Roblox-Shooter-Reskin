@@ -1,4 +1,3 @@
-using GamePush;
 using TMPro;
 using UnityEngine;
 
@@ -21,7 +20,7 @@ public class SetLanguage : MonoBehaviour
 
     public void Initialize()
     {
-        switch(GP_Language.Current())
+        /*switch(GP_Language.Current())
         {
             case Language.Russian:
                 return;
@@ -31,6 +30,6 @@ public class SetLanguage : MonoBehaviour
                 return;
         }
 
-        GetComponent<TMP_Text>().text = _english;
+        GetComponent<TMP_Text>().text = _english;*/
     }
 }

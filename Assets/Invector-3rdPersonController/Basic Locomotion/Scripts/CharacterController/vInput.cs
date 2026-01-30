@@ -1,8 +1,7 @@
-﻿using GamePush;
-using System;
+﻿using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using YG;
 #if MOBILE_INPUT
 using UnityStandardAssets.CrossPlatformInput;
 #endif
@@ -69,7 +68,7 @@ namespace Invector.vCharacterController
                     else if (isMobileInput())
                     {
 #if UNITY_EDITOR
-                        if(GP_Device.IsMobile() == false)
+                        if(YG2.envir.isDesktop)
                         {
                             inputDevice = InputDevice.Mobile;
                             if(hud != null)

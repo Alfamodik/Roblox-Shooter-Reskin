@@ -1,4 +1,3 @@
-using GamePush;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -41,17 +40,17 @@ public class WeaponUnlock : MonoBehaviour
     private void ShowAds()
     {
 #if UNITY_EDITOR
-        StartAds();
+        /*StartAds();
         AwardReward("");
-        EndAds(true);
+        EndAds(true);*/
 #endif
-        if(GP_Ads.IsRewardedAvailable())
-            GP_Ads.ShowRewarded("", AwardReward, StartAds, EndAds);
+        /*if(GP_Ads.IsRewardedAvailable())
+            GP_Ads.ShowRewarded("", AwardReward, StartAds, EndAds);*/
     }
 
     private void AwardReward(string value) { }
 
-    private void StartAds()
+    /*private void StartAds()
     {
         print("Start Rewarded Ads");
         _pauseController.SetAdsPause(false);
@@ -74,5 +73,5 @@ public class WeaponUnlock : MonoBehaviour
 
         if(_deleteIfUnlocked)
             Destroy(gameObject);
-    }
+    }*/
 }

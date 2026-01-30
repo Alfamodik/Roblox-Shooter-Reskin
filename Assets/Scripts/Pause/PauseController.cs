@@ -1,4 +1,3 @@
-using GamePush;
 using Invector.vCharacterController;
 using System.Collections.Generic;
 using UnityEditor;
@@ -99,7 +98,7 @@ public class PauseController : MonoBehaviour
         if (unlockCursor)
             LockUnlockCursor.ShowOnDesktop(_playerVShooterMeleeInput);
         
-        GP_Game.Pause();
+        //GP_Game.Pause();
         Time.timeScale = 0f;
         AudioListener.volume = 0.0f;
         GlobalAudio.SetMuteSuorces(true);
@@ -112,7 +111,7 @@ public class PauseController : MonoBehaviour
         if (lockCursor)
             LockUnlockCursor.HideOnDesktop(_playerVShooterMeleeInput);
 
-        GP_Game.Resume();
+        //GP_Game.Resume();
         Time.timeScale = 1.0f;
         AudioListener.volume = 1.0f;
         GlobalAudio.SetMuteSuorces(false);

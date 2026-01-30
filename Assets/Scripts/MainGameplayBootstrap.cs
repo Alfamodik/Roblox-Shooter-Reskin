@@ -1,7 +1,7 @@
-using GamePush;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class MainGameplayBootstrap : MonoBehaviour
 {
@@ -71,8 +71,8 @@ public class MainGameplayBootstrap : MonoBehaviour
 
     private void Start()
     {
-        GP_Game.GameReady();
-        GP_Game.GameplayStart();
+        //GP_Game.GameReady();
+        //GP_Game.GameplayStart();
     }
 
     private void OnDestroy() => DisposeHandler.DisposeAll();
@@ -90,7 +90,7 @@ public class MainGameplayBootstrap : MonoBehaviour
     private void WaveDeactivated()
     {
         print("WaveDeactivated");
-        _pauseController.SetPause(true);
+        //_pauseController.SetPause(true);
     }
 
     private void CreateScripts()
@@ -102,7 +102,7 @@ public class MainGameplayBootstrap : MonoBehaviour
 
     private void Initialize()
     {
-        if(GP_Device.IsMobile() && LockUnlockCursor.NotInEditor)
+        if(!YG2.envir.isDesktop && LockUnlockCursor.NotInEditor)
         {
             _enemySpawner.Initialize(_enemylist, _mobileInstanceLimit);
             print($"instanceLimit = {_mobileInstanceLimit}");

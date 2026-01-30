@@ -1,6 +1,6 @@
-using GamePush;
 using Invector.vCharacterController;
 using UnityEngine;
+using YG;
 
 public class LockUnlockCursor : MonoBehaviour
 {
@@ -30,5 +30,5 @@ public class LockUnlockCursor : MonoBehaviour
             HideCursor(VShooterMeleeInput);
     }
 
-    private static bool IsDesktop() => (GP_Device.IsMobile() == false) == NotInEditor;
+    private static bool IsDesktop() => YG2.envir.isDesktop == NotInEditor;
 }

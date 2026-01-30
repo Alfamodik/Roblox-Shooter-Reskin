@@ -1,4 +1,3 @@
-using GamePush;
 using Invector.vCharacterController;
 using UnityEngine;
 
@@ -15,12 +14,12 @@ public class Revive : MonoBehaviour
         print("RevivePlayer");
 
 #if UNITY_EDITOR
-        Started();
-        End(true);
+        //Started();
+        //End(true);
 #endif
 
-        if(GP_Ads.IsRewardedAvailable())
-            GP_Ads.ShowRewarded("Revive", e => { }, Started, End);
+        /*if(GP_Ads.IsRewardedAvailable())
+            GP_Ads.ShowRewarded("Revive", e => { }, Started, End);*/
     }
 
     private void RevivePl()
@@ -42,7 +41,7 @@ public class Revive : MonoBehaviour
 
     }
 
-    private void Started()
+    /*private void Started()
     {
         print("AdsStarted");
         _pauseController.SetAdsPause(true);
@@ -63,5 +62,5 @@ public class Revive : MonoBehaviour
             _pauseController.TakeOfAdsPause(true);
             _pauseController.TakeOfPause(true);
         }
-    }
+    }*/
 }

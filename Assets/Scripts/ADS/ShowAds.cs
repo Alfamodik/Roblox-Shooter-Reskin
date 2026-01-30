@@ -1,4 +1,3 @@
-using GamePush;
 using UnityEngine;
 
 public class ShowAD : NeedOfRankNotifier
@@ -15,13 +14,13 @@ public class ShowAD : NeedOfRankNotifier
 
     public void TryShowFullscreen()
     {
-        if(GP_Ads.IsFullscreenAvailable() && _adsAviable)
-            ShowFullscreen();
+        /*if(GP_Ads.IsFullscreenAvailable() && _adsAviable)
+            ShowFullscreen();*/
     }
 
     private void SetAviable(int obj) => _adsAviable = true;
 
-    private void ShowFullscreen() => GP_Ads.ShowFullscreen(OnStart, OnEnd);
+    /*private void ShowFullscreen() => GP_Ads.ShowFullscreen(OnStart, OnEnd);
 
     private void OnStart() => _pauseController.SetAdsPause(true);
 
@@ -30,5 +29,5 @@ public class ShowAD : NeedOfRankNotifier
         _adsAviable = false;
         _pauseController.TakeOfAdsPause(true);
         GP_Game.GameReady();
-    }
+    }*/
 }
