@@ -416,17 +416,20 @@ namespace Invector.vCharacterController.AI
             }
         }
 
+        private float lastAutoCrouchCheck;
+        private const float AUTO_CROUCH_INTERVAL = 0.3f;
         public void CheckAutoCrouch()
         {
-            // radius of SphereCast
+            if (Time.time - lastAutoCrouchCheck < AUTO_CROUCH_INTERVAL)
+            {
+                return;
+            }
+            lastAutoCrouchCheck = Time.time;
+
             float radius = _capsuleCollider.radius * 0.9f;
-            // Position of SphereCast origin stating in base of capsule
             Vector3 pos = transform.position + Vector3.up * ((_capsuleCollider.height * 0.5f) - _capsuleCollider.radius);
-            // ray for SphereCast
             Ray ray2 = new Ray(pos, Vector3.up);
             RaycastHit groundHit;
-            // sphere cast around the base of capsule for check ground distance
-            //if (Physics.SphereCast(ray2, radius, out groundHit, _capsuleCollider.bounds.max.y - (_capsuleCollider.radius * 0.1f), groundLayer))
             if (Physics.SphereCast(ray2, radius, out groundHit, headDetect - (_capsuleCollider.radius * 0.1f), autoCrouchLayer))
             {
                 isCrouched = true;
@@ -465,6 +468,8 @@ namespace Invector.vCharacterController.AI
         }
 
         int canSeeTargetIteration;
+        private float lastCheckTargetTime;
+        private const float CHECK_TARGET_INTERVAL = 0.2f;
         /// <summary>
         /// Target Detection
         /// </summary>
@@ -472,6 +477,12 @@ namespace Invector.vCharacterController.AI
         /// <returns></returns>
         public void CheckTarget()
         {
+            if (Time.time - lastCheckTargetTime < CHECK_TARGET_INTERVAL)
+            {
+                return;
+            }
+            lastCheckTargetTime = Time.time;
+
             if (currentTarget.transform == null || !agressiveAtFirstSight)
             {
                 canSeeTarget = false;

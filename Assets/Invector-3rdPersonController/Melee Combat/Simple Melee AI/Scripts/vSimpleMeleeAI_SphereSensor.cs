@@ -9,10 +9,16 @@ namespace Invector.vCharacterController.AI
         public List<Transform> targetsInArea;
         protected bool getFromDistance;
         protected float lastDetectionDistance;
+        private Collider[] overlapResults = new Collider[50];
 
         protected virtual void Start()
         {
             targetsInArea = new List<Transform>();
+            var collider = GetComponent<SphereCollider>();
+            if (collider)
+            {
+                collider.enabled = false;
+            }
         }
 
         public virtual void AddTarget(Transform _transform)
@@ -111,12 +117,19 @@ namespace Invector.vCharacterController.AI
         {
             this.getFromDistance = getTargetFromDistance;
             lastDetectionDistance = maxDistance;
-            var targetsAround = Physics.OverlapSphere(transform.position, maxDistance, detectMask);
-            targetsAround = System.Array.FindAll(targetsAround, t =>
-                                                 (root && root != t.transform)
-                                                 && (detectTags != null && detectTags.Count > 0 && detectTags.Contains(t.gameObject.tag))
-                                                 && InFovAngle(t.transform, minDistance, FOV));
-            targetsInArea = System.Array.ConvertAll(targetsAround, c => c.transform).vToList();
+            int count = Physics.OverlapSphereNonAlloc(transform.position, maxDistance, overlapResults, detectMask);
+            targetsInArea.Clear();
+            for (int i = 0; i < count; i++)
+            {
+                var t = overlapResults[i];
+                if (root && root == t.transform) continue;
+                if (detectTags == null || detectTags.Count == 0 || !detectTags.Contains(t.gameObject.tag)) continue;
+                if (InFovAngle(t.transform, minDistance, FOV))
+                {
+                    targetsInArea.Add(t.transform);
+                    if (!getTargetFromDistance) break;
+                }
+            }
         }
 
         protected virtual bool InFovAngle(Transform target, float minDistance, float FOV)

@@ -8,9 +8,9 @@ namespace Invector.vCharacterController.AI
     public class vSimpleMeleeAI_Controller : vSimpleMeleeAI_Animator, vIMeleeFighter
     {
         [vEditorToolbar("Iterations")]
-        public float stateRoutineIteration = 0.15f;
-        public float destinationRoutineIteration = 0.25f;
-        public float findTargetIteration = 0.25f;
+        public float stateRoutineIteration = 0.2f;
+        public float destinationRoutineIteration = 0.3f;
+        public float findTargetIteration = 1f;
         public float smoothSpeed = 5f;
 
         [vEditorToolbar("Events")]
@@ -85,7 +85,7 @@ namespace Invector.vCharacterController.AI
         {
             if (currentHealth > 0 && sphereSensor != null)
             {
-                if (currentTarget.transform == null || (sortTargetFromDistance))
+                if (currentTarget.transform == null)
                 {
                     sphereSensor.CheckTargetsAround(fieldOfView, minDetectDistance, maxDetectDistance, tagsToDetect, layersToDetect, sortTargetFromDistance);
                     var vChar = sphereSensor.GetTargetvCharacter();
@@ -130,7 +130,10 @@ namespace Invector.vCharacterController.AI
                 yield return new WaitForSeconds(findTargetIteration);
                 if (currentHealth > 0)
                 {
-                    SetTarget();
+                    if (currentTarget.transform == null || TargetDistance > lostTargetDistance)
+                    {
+                        SetTarget();
+                    }
                     CheckTarget();
                 }
             }

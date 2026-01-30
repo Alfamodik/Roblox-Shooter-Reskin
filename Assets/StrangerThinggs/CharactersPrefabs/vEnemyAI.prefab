@@ -43,7 +43,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1064,9 +1064,9 @@ MonoBehaviour:
   sortTargetFromDistance: 0
   fieldOfView: 360
   maxDetectDistance: 100
-  minDetectDistance: 3
-  distanceToLostTarget: 1
-  chaseStopDistance: 0
+  minDetectDistance: 10
+  distanceToLostTarget: 1000
+  chaseStopDistance: 0.5
   drawAgentPath: 0
   displayGizmos: 0
   passiveToDamage: 0

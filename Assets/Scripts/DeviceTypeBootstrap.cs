@@ -10,7 +10,7 @@ public class DeviceTypeBootstrap : MonoBehaviour
 
     private void Start()
     {
-        if(GP_Device.IsMobile() && LockUnlockCursor.NotInEditor)
+        /*if(GP_Device.IsMobile() && LockUnlockCursor.NotInEditor)
         {
             _mobileUI.SetActive(true);
             _desktopUI.SetActive(false);
@@ -21,6 +21,6 @@ public class DeviceTypeBootstrap : MonoBehaviour
             _mobileUI.SetActive(false);
             _desktopUI.SetActive(true);
             //LockUnlockCursor.HideCursor(_VShooterMeleeInput);
-        }
+        }*/
     }
 }
