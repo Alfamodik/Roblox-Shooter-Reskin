@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e633f41173dbbf44b445aca6b38bec6, type: 3}
   m_Name: HandGun
   m_EditorClassIdentifier: 
-  <PrewiewPrefab>k__BackingField: {fileID: 919132149155446097, guid: bf9ff1c95c35cfc4dbb20ee0d3fe2f48,
+  <PrewiewPrefab>k__BackingField: {fileID: 170828, guid: 98f8a432a505287429b8b96d94bcfee3,
     type: 3}
   <Prefab>k__BackingField: {fileID: 0}
   <Image>k__BackingField: {fileID: 21300000, guid: 947d5227b126a6f4bb1d70eaa159a0d8,
