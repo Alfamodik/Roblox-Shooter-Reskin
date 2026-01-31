@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine;
 using YG;
+using UnityEngine.EventSystems;
+
 #if MOBILE_INPUT
 using UnityStandardAssets.CrossPlatformInput;
 #endif
