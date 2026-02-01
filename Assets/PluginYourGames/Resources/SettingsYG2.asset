@@ -138,8 +138,8 @@ MonoBehaviour:
   InterstitialAdv:
     showFirstAdv: 0
     interAdvInterval: 60
-    postponeCallByFail: 0
-    postponeCallTimer: 10
+    postponeCallByFail: 1
+    postponeCallTimer: 60
     labelAdvSimLabel: 0
   Leaderboards:
     enable: 1
@@ -353,8 +353,8 @@ MonoBehaviour:
     device: 0
     language: ru
     advIntervalSimulation: 60
-    durationAdv: 1
-    loadAdv: 1
+    durationAdv: 0.5
+    loadAdv: 0
     testFailAds: 0
   Templates:
     logoImageFormat: 0

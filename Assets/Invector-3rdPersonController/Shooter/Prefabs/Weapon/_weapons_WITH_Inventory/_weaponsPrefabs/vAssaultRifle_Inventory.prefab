@@ -32912,7 +32912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 1
+  selectedToolbar: 3
   weaponCategory: Rifle
   _shootFrequency: 0.125
   isInfinityAmmo: 1
@@ -33010,10 +33010,10 @@ MonoBehaviour:
   useIKOnAiming: 1
   handIKTarget: {fileID: 492864}
   aimReference: {fileID: 461228}
-  cameraStability: 0.25
-  recoilRight: 0.25
-  recoilLeft: -0.25
-  recoilUp: 0.25
+  cameraStability: 1
+  recoilRight: 0
+  recoilLeft: 0
+  recoilUp: 0
   reloadSource: {fileID: 0}
   reloadClip: {fileID: 8300000, guid: f4b0865c53d458d49a58b67d16d4b711, type: 3}
   finishReloadClip: {fileID: 0}
