@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using UnityEngine;
 using YG;
@@ -139,13 +139,13 @@ namespace Invector.vCharacterController
         private bool isMobileInput()
         {
 #if UNITY_EDITOR && UNITY_MOBILE
-            if (EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButtonDown(0))
+            if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButtonDown(0))
             {
                 return true;
             }
 		
 #elif MOBILE_INPUT
-            if (EventSystem.current.IsPointerOverGameObject() || (Input.touches.Length > 0))
+            if ((EventSystem.current != null && EventSystem.current.IsPointerOverGameObject()) || (Input.touches.Length > 0))
                 return true;
 #endif
             return false;

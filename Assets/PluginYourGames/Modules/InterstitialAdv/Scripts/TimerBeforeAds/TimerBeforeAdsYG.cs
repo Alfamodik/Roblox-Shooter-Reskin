@@ -45,7 +45,7 @@ namespace YG
             {
                 yield return new WaitForSeconds(1.0f);
 
-                if (YG2.isTimerAdvCompleted && !YG2.nowAdsShow)
+                if (YG2.isTimerAdvCompleted && !YG2.nowAdsShow && !PauseHandler.IsPaused)
                 {
                     onShowTimer?.Invoke();
                     objSecCounter = 0;
