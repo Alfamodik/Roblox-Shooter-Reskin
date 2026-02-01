@@ -81,7 +81,7 @@ namespace Invector.vCharacterController
                         }
 #endif
 #if !UNITY_EDITOR
-                        if(GP_Device.IsMobile())
+                        if(YG2.envir.isMobile)
                         {
                             inputDevice = InputDevice.Mobile;
                             if(hud != null)

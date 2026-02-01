@@ -8,27 +8,18 @@
         false,
         false
     ],
-    "idSave": 864,
-    "SkinsDataInitialized": true,
-    "SelectedCharacterSkin": 1,
+    "idSave": 865,
+    "SkinsDataInitialized": false,
+    "SelectedCharacterSkin": 0,
     "SelectedMazeSkin": 0,
     "SelectedToolSkin": 0,
     "SelectedPetSkin": 0,
-    "SelectedWeaponSkin": 3,
-    "OpenCharacterSkins": [
-        1
-    ],
-    "OpenMazeSkins": [
-        0
-    ],
-    "OpenToolSkins": [
-        0
-    ],
+    "SelectedWeaponSkin": 0,
+    "OpenCharacterSkins": [],
+    "OpenMazeSkins": [],
+    "OpenToolSkins": [],
     "OpenPetSkins": [],
-    "OpenWeaponSkins": [
-        0,
-        3
-    ],
+    "OpenWeaponSkins": [],
     "СurrentToolId": 0,
     "Balance": 0
 }

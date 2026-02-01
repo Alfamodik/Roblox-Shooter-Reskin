@@ -1,0 +1,3 @@
+﻿Build path: F:/Alfamod/Projects/Unity/Builds/Roblox-Reskin
+Build number: 1
+PluginYG version: 2.007
