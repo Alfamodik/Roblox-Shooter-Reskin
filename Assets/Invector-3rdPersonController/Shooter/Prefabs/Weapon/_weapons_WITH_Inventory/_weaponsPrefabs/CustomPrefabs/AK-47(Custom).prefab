@@ -22955,7 +22955,7 @@ MonoBehaviour:
   _minDamageDistance: 8
   _maxDamageDistance: 25
   _minDamage: 8
-  _maxDamage: 25
+  _maxDamage: 75
   source: {fileID: 2812852288890589981}
   fireClip: {fileID: 8300000, guid: 097e8235e0162d64ba53da9ef4ab8d61, type: 3}
   emptyClip: {fileID: 8300000, guid: 9b2ce00d16b72c34a9b46200421a6def, type: 3}

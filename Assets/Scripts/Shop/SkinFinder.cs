@@ -30,6 +30,7 @@ public class SkinFinder
         ShopItem = _contentItems.MazeSkinItems.FirstOrDefault(skin => skin.PurchaseId == purchaseId);
         ShopItem = _contentItems.ToolSkinItems.FirstOrDefault(skin => skin.PurchaseId == purchaseId);
         ShopItem = _contentItems.PetSkinItems.FirstOrDefault(skin => skin.PurchaseId == purchaseId);
+        ShopItem = _contentItems.WeaponSkinItems.FirstOrDefault(skin => skin.PurchaseId == purchaseId);
         return ShopItem;
     }
 }

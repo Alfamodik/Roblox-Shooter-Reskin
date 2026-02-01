@@ -18,8 +18,8 @@ MonoBehaviour:
   <Image>k__BackingField: {fileID: 21300000, guid: a62f75bb5e7d3a74597fd0dd25a6fd7d,
     type: 3}
   <Price>k__BackingField: 0
-  <SerialNumber>k__BackingField: 0
+  <SerialNumber>k__BackingField: 4
   <PurchaseId>k__BackingField: M16
-  <MethodObtainingSkin>k__BackingField: 0
+  <MethodObtainingSkin>k__BackingField: 2
   <SkinType>k__BackingField: 3
   <InvectorId>k__BackingField: 31
