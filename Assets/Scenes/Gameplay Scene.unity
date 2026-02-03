@@ -6219,6 +6219,15 @@ MonoBehaviour:
     Volume: 0.1
     AlreadyPlaying: 0
     Source: {fileID: 0}
+  - Name: SpendMoney
+    Loop: 0
+    PlayOnAwake: 0
+    DontDestroyOnLoad: 0
+    AudioType: 0
+    Clip: {fileID: 8300000, guid: 49b059f21478c0d4d80e9a74b5b1cc50, type: 3}
+    Volume: 0
+    AlreadyPlaying: 0
+    Source: {fileID: 0}
 --- !u!4 &840508289
 Transform:
   m_ObjectHideFlags: 0

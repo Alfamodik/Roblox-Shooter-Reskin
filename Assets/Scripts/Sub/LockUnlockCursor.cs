@@ -4,7 +4,6 @@ using YG;
 
 public class LockUnlockCursor : MonoBehaviour
 {
-    public static bool NotInEditor = true;
 
     public static void ShowCursor(vShooterMeleeInput VShooterMeleeInput)
     {
@@ -30,5 +29,5 @@ public class LockUnlockCursor : MonoBehaviour
             HideCursor(VShooterMeleeInput);
     }
 
-    private static bool IsDesktop() => YG2.envir.isDesktop == NotInEditor;
+    private static bool IsDesktop() => YG2.envir.isDesktop;
 }

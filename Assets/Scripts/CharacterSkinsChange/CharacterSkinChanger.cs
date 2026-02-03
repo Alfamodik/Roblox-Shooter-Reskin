@@ -2,6 +2,7 @@ using Invector.vCharacterController;
 using System;
 using System.Linq;
 using UnityEngine;
+using YG;
 
 public class CharacterSkinChanger : MonoBehaviour
 {
@@ -33,8 +34,8 @@ public class CharacterSkinChanger : MonoBehaviour
         CurrentCharacter = newCharacter.GetComponent<vThirdPersonController>();
         
         vThirdPersonInput input = newCharacter.GetComponent<vThirdPersonInput>();
-        input.unlockCursorOnStart = !isFirstSpawn;
-        input.showCursorOnStart = !isFirstSpawn;
+        input.unlockCursorOnStart = YG2.envir.isMobile || !isFirstSpawn;
+        input.showCursorOnStart = YG2.envir.isMobile || !isFirstSpawn;
         
         var weaponItem = _shopContent.WeaponSkinItems.FirstOrDefault(w => w.SkinType == _persistentData.PlayerData.SelectedWeaponSkin);
         var weaponEquipper = new WeaponEquipper(this);

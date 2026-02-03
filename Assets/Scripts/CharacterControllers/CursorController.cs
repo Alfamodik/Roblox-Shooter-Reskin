@@ -25,16 +25,20 @@ public class CursorController : MonoBehaviour
     {
         Debug.Log("LockCursor()");
 
-        if (YG2.envir.isDesktop)
-        {
-            _characterInput.ShowCursor(false);
-            _characterInput.LockCursor(false);
-        }
+        if (YG2.envir.isMobile)
+            return;
+
+        _characterInput.ShowCursor(false);
+        _characterInput.LockCursor(false);
     }
 
     public void UnlockCursor()
     {
         Debug.Log("UnlockCursor()");
+
+        if (YG2.envir.isMobile)
+            return;
+
         _characterInput.ShowCursor(true);
         _characterInput.LockCursor(true);
     }

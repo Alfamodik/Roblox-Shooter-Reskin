@@ -41,10 +41,6 @@ public class MainGameplayBootstrap : MonoBehaviour
 
     private void Awake()
     {
-#if UNITY_EDITOR
-        LockUnlockCursor.NotInEditor = _mobieMod;
-#endif
-
         if(PlayerPrefs.GetString("version", "") != _currentVersion)
             DeleteAllPrefs();
 
@@ -102,7 +98,7 @@ public class MainGameplayBootstrap : MonoBehaviour
 
     private void Initialize()
     {
-        if(!YG2.envir.isDesktop && LockUnlockCursor.NotInEditor)
+        if(!YG2.envir.isDesktop)
         {
             _enemySpawner.Initialize(_enemylist, _mobileInstanceLimit);
             print($"instanceLimit = {_mobileInstanceLimit}");

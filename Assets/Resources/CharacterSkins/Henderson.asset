@@ -21,5 +21,5 @@ MonoBehaviour:
   <Price>k__BackingField: 0
   <SerialNumber>k__BackingField: 1
   <PurchaseId>k__BackingField: Henderson
-  <MethodObtainingSkin>k__BackingField: 0
+  <MethodObtainingSkin>k__BackingField: 1
   <SkinType>k__BackingField: 3
