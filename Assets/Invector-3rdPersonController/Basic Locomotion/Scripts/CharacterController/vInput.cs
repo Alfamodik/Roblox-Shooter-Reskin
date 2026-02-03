@@ -70,7 +70,7 @@ namespace Invector.vCharacterController
                     else if (isMobileInput())
                     {
 #if UNITY_EDITOR
-                        if(YG2.envir.isDesktop)
+                        if(!YG2.envir.isDesktop)
                         {
                             inputDevice = InputDevice.Mobile;
                             if(hud != null)
