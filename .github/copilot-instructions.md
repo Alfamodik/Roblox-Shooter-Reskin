@@ -2,12 +2,13 @@
 - Project name: Roblox-Reskin
 - Unity version: Unity 2022.3.20f1
 - Active scene:
+  - Name: vShooterController_Eleven
   - Tags:
     - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Action, AutoCrouch, Ragdoll, Ignore Ragdoll, Boss, Enemy, CompanionAI, Weapon, LookAt, Dirt, Wood, Metal, Concrete, Glass, Water, LadderTrigger, ExitWater, Barrel, FreeClimb, ClimbDirection, Zipline, PlayerUI, Collectable, CoverPoint, Interactable, AIAction, FxTemporaire, FX, Animal
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Water, UI, Player, Enemy, CompanionAI, Triggers, StopMove, HeadTrack, BodyPart, BlockAIRayCast, Pushable, CoverPoint, SkinRender, PostProcess
 - Active game object:
-  - Name: vShooterController_Eleven
-  - Tag: Player
-  - Layer: Player
+  - Name: CameraMove
+  - Tag: Untagged
+  - Layer: UI
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
