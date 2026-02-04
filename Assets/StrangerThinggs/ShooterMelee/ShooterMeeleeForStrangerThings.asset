@@ -99,7 +99,7 @@ MonoBehaviour:
   dropObject: {fileID: 136552, guid: e53efed3927a7254aa010f9c6752223c, type: 3}
   attributes:
   - name: 2
-    value: 250
+    value: 200
     isOpen: 0
     isBool: 0
   - name: 6
@@ -148,7 +148,7 @@ MonoBehaviour:
     type: 3}
   attributes:
   - name: 2
-    value: 25
+    value: 100
     isOpen: 0
     isBool: 0
   - name: 6
@@ -156,7 +156,7 @@ MonoBehaviour:
     isOpen: 0
     isBool: 0
   - name: 10
-    value: 85
+    value: 150
     isOpen: 0
     isBool: 0
   - name: 9

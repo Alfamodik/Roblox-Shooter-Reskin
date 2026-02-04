@@ -276,6 +276,8 @@ namespace Invector.vItemManager
         /// </summary>
         public virtual void OpenInventory()
         {
+            return; //шобы инвентарь не открывался
+
             if (isOpen)
             {
                 return;

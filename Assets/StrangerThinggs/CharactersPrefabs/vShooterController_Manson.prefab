@@ -6170,7 +6170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8018612500805513981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6187,7 +6187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 320, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6530584901272974393
@@ -7392,7 +7392,7 @@ MonoBehaviour:
   selectedToolbar: 0
   unlockCursorOnStart: 0
   showCursorOnStart: 0
-  toggleWalk: 301
+  toggleWalk: 0
   horizontalInput:
     useInput: 1
     isAxisInUse: 0
@@ -7445,7 +7445,7 @@ MonoBehaviour:
     useInput: 1
     isAxisInUse: 0
     isUnityInput: 0
-    keyboard: C
+    keyboard: None
     keyboardAxis: 0
     joystick: Y
     joystickAxis: 0
@@ -7493,7 +7493,7 @@ MonoBehaviour:
     useInput: 1
     isAxisInUse: 0
     isUnityInput: 0
-    keyboard: Q
+    keyboard: None
     keyboardAxis: 0
     joystick: B
     joystickAxis: 0
@@ -7544,7 +7544,7 @@ MonoBehaviour:
     useInput: 1
     isAxisInUse: 0
     isUnityInput: 0
-    keyboard: Mouse ScrollWheel
+    keyboard: None
     keyboardAxis: 0
     joystick: 
     joystickAxis: 0
@@ -7581,7 +7581,7 @@ MonoBehaviour:
     useInput: 1
     isAxisInUse: 0
     isUnityInput: 0
-    keyboard: Mouse0
+    keyboard: None
     keyboardAxis: 0
     joystick: RB
     joystickAxis: 0
@@ -7597,7 +7597,7 @@ MonoBehaviour:
     useInput: 1
     isAxisInUse: 0
     isUnityInput: 0
-    keyboard: Alpha1
+    keyboard: None
     keyboardAxis: 0
     joystick: RT
     joystickAxis: 1
@@ -7613,7 +7613,7 @@ MonoBehaviour:
     useInput: 1
     isAxisInUse: 0
     isUnityInput: 0
-    keyboard: Mouse1
+    keyboard: None
     keyboardAxis: 0
     joystick: LB
     joystickAxis: 0
@@ -7694,7 +7694,7 @@ MonoBehaviour:
     useInput: 1
     isAxisInUse: 0
     isUnityInput: 0
-    keyboard: Z
+    keyboard: None
     keyboardAxis: 0
     joystick: RB
     joystickAxis: 0
@@ -20132,7 +20132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1, y: -523}
   m_SizeDelta: {x: -2, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9199174096874574851
@@ -27567,7 +27567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 90, y: 73.599976}
+  m_AnchoredPosition: {x: -1000, y: 73.599976}
   m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &8341757635685854079
@@ -42367,7 +42367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 4
+  selectedToolbar: 1
   cameraStyle: 0
   canUseThrow: 0
   drawTrajectory: 1
@@ -42408,7 +42408,7 @@ MonoBehaviour:
     useInput: 1
     isAxisInUse: 0
     isUnityInput: 0
-    keyboard: G
+    keyboard: None
     keyboardAxis: 0
     joystick: LB
     joystickAxis: 0
@@ -60991,7 +60991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -206}
   m_SizeDelta: {x: 71.17914, y: 39.059998}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &1363031720429288495
