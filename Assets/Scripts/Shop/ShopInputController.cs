@@ -6,7 +6,7 @@ public class ShopInputController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (_shop.IsOpen)
                 _shop.Close();

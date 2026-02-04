@@ -7,12 +7,9 @@ public class PauseController : MonoBehaviour
 {
     [SerializeField] private GameObject _winCanvas;
     [SerializeField] private EnemySpawner _enemySpawner;
-
-    [SerializeField] private vThirdPersonController _playerVThirdPersonController;
-    [SerializeField] private vShooterMeleeInput _playerVShooterMeleeInput;
-
     [SerializeField] private List<AudioSource> _audioSources;
 
+    private vShooterMeleeInput _playerVShooterMeleeInput;
     private bool _pauseAvailable = true;
 
     private void Awake()
@@ -30,14 +27,7 @@ public class PauseController : MonoBehaviour
 
     private void OnCharacterChanged(vThirdPersonInput input)
     {
-        _playerVThirdPersonController = input.GetComponent<vThirdPersonController>();
         _playerVShooterMeleeInput = input.GetComponent<vShooterMeleeInput>();
-    }
-
-    private void Update()
-    {
-        /*if(Input.GetKeyDown(KeyCode.O))
-            ChangedPause();*/
     }
 
     public void SetPauseAvailable(bool available) => _pauseAvailable = available;

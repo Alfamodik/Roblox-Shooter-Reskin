@@ -14,6 +14,9 @@ public class Zombe : MonoBehaviour, IEnemy, IPausable
     [Space]
     [SerializeField] private int _reward;
 
+    [Space]
+    [SerializeField] private Instantiate _instantiateOnSpawn;
+
     private vSimpleMeleeAI_Controller _controller;
     
     public bool OnPause { get; private set; }
@@ -21,6 +24,8 @@ public class Zombe : MonoBehaviour, IEnemy, IPausable
     private void Awake()
     {
         _controller = GetComponent<vSimpleMeleeAI_Controller>();
+        _instantiateOnSpawn?.InstantiatePrefab();
+
         PauseHandler.Add(this);
     }
 

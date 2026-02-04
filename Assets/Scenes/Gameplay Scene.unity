@@ -14566,8 +14566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4637819fe7e97e54980c3d8f006688ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _VShooterMeleeInput: {fileID: 0}
-  _mobileUI: {fileID: 0}
   _desktopUI: {fileID: 2129444373}
 --- !u!114 &1673964237
 MonoBehaviour:
@@ -14626,8 +14624,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _winCanvas: {fileID: 4876420341970892892}
   _enemySpawner: {fileID: 1789783268}
-  _playerVThirdPersonController: {fileID: 0}
-  _playerVShooterMeleeInput: {fileID: 0}
   _audioSources:
   - {fileID: 1673964242}
 --- !u!82 &1673964242
@@ -15669,7 +15665,7 @@ MonoBehaviour:
   - {fileID: 4790530894589872779, guid: 5b0777ad90098d44a89d4f550703ebf4, type: 3}
   _bossPrefabs: []
   _enemyParent: {fileID: 446130582}
-  _spawnCooldown: 4
+  _spawnCooldown: 3
   _bossSpawnRate: 0
 --- !u!4 &1789783269
 Transform:
@@ -16252,7 +16248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -523, y: -92}
+  m_AnchoredPosition: {x: -880, y: -70}
   m_SizeDelta: {x: 944.9746, y: 56.30017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1817669770
@@ -16276,7 +16272,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u0412\u044B\u0431\u043E\u0440 \u043E\u0440\u0443\u0436\u0438\u044F -
-    \"O\" (\"\u0429\")"
+    \"\u0423\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1937890ba35f5694b8ceb4046083f826, type: 2}
   m_sharedMaterial: {fileID: 6813747413539368613, guid: 1937890ba35f5694b8ceb4046083f826,
@@ -16486,10 +16482,9 @@ MonoBehaviour:
       de: 
       hi: 
   text: 
-  ru: "\u0412\u044B\u0431\u043E\u0440 \u043E\u0440\u0443\u0436\u0438\u044F - \"O\"
-    (\"\u0429\")"
-  en: "Weapon selection - \"O\" (\"\u0428\")"
-  tr: "Silah se\xE7imi - \"O\" (\"\u0428\")"
+  ru: "\u0412\u044B\u0431\u043E\u0440 \u043E\u0440\u0443\u0436\u0438\u044F - \"\u0423\""
+  en: Weapon selection - "E"
+  tr: 
   az: 
   be: 
   he: 
@@ -16519,9 +16514,9 @@ MonoBehaviour:
   uniqueFont: {fileID: 0}
   additionalText: {fileID: 0}
   textHeight: 20
-  processTranslateLabel: 3/19 completed
+  processTranslateLabel: 2/2 completed
   componentTextField: 1
-  countLang: 3
+  countLang: 2
 --- !u!1 &1822833087
 GameObject:
   m_ObjectHideFlags: 0
@@ -18907,7 +18902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2129444374
 MonoBehaviour:
   m_ObjectHideFlags: 0

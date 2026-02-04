@@ -331,7 +331,7 @@ MonoBehaviour:
       consumed: 1
     - id: Riffle
       title: Riffle
-      description: Product - Ak47
+      description: Product - Riffle
       imageURI: demo image
       price: 25 YAN
       priceValue: 25
