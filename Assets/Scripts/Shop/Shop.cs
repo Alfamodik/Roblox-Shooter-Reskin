@@ -2,6 +2,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Invector.vCharacterController;
 using YG;
 using YG.Utils.Pay;
 
@@ -58,6 +59,7 @@ public class Shop : MonoBehaviour
     private SkinUnlocker _skinUnlocker;
     private OpenSkinsChecker _openSkinsChecker;
     private SelectedSkinChecker _selectedSkinChecker;
+    private InvectorCharacterLinks _currentInvectorCharacterLinks;
 
     public bool IsOpen { get; private set; }
 
@@ -119,29 +121,15 @@ public class Shop : MonoBehaviour
 
         _shopPanel.ItemViewClicked += OnItemViewClicked;
         _closeButton.onClick.AddListener(Close);
+        CharacterSkinChanger.CharacterChanged += UpdateShopButtonLink;
 
         LoadSelectedSkins();
     }
-
-    private void LoadSelectedSkins()
+    
+    private void UpdateShopButtonLink(vThirdPersonInput item)
     {
-        CharacterSkinItem selectedCharacter = _contentItems.CharacterSkinItems.FirstOrDefault(item =>
-        {
-            _selectedSkinChecker.Visit(item);
-            return _selectedSkinChecker.IsSelected;
-        });
-
-        if (selectedCharacter != null)
-            _skinEquipper.Visit(selectedCharacter);
-
-        WeaponSkinItem selectedWeapon = _contentItems.WeaponSkinItems.FirstOrDefault(item =>
-        {
-            _selectedSkinChecker.Visit(item);
-            return _selectedSkinChecker.IsSelected;
-        });
-
-        if (selectedWeapon != null)
-            _skinEquipper.Visit(selectedWeapon);
+        _currentInvectorCharacterLinks = item.GetComponent<InvectorCharacterLinks>();
+        _currentInvectorCharacterLinks.Button.onClick.AddListener(Open);
     }
 
     public void Open()
@@ -169,9 +157,34 @@ public class Shop : MonoBehaviour
         if (_cursorController != null)
             _cursorController.LockCursor();
 
+        if (YG2.envir.isMobile)
+            _currentInvectorCharacterLinks.MobileUI.SetActive(true);
+
         if (YG2.isTimerAdvCompleted)
             YG2.InterstitialAdvShow();
     }
+
+    private void LoadSelectedSkins()
+    {
+        CharacterSkinItem selectedCharacter = _contentItems.CharacterSkinItems.FirstOrDefault(item =>
+        {
+            _selectedSkinChecker.Visit(item);
+            return _selectedSkinChecker.IsSelected;
+        });
+
+        if (selectedCharacter != null)
+            _skinEquipper.Visit(selectedCharacter);
+
+        WeaponSkinItem selectedWeapon = _contentItems.WeaponSkinItems.FirstOrDefault(item =>
+        {
+            _selectedSkinChecker.Visit(item);
+            return _selectedSkinChecker.IsSelected;
+        });
+
+        if (selectedWeapon != null)
+            _skinEquipper.Visit(selectedWeapon);
+    }
+
 
     private void OnItemViewClicked(ShopItemView item)
     {

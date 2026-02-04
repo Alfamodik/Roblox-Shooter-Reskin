@@ -17,8 +17,8 @@ MonoBehaviour:
   <Prefab>k__BackingField: {fileID: 0}
   <Image>k__BackingField: {fileID: 21300000, guid: 5e76b1b524a402e4fa6fc3091655bb4b,
     type: 3}
-  <Price>k__BackingField: 2500
-  <SerialNumber>k__BackingField: 3
+  <Price>k__BackingField: 500
+  <SerialNumber>k__BackingField: 2
   <PurchaseId>k__BackingField: Shotgun
   <MethodObtainingSkin>k__BackingField: 1
   <SkinType>k__BackingField: 2

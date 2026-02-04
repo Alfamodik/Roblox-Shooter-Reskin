@@ -33,6 +33,12 @@ public class CharacterSkinChanger : MonoBehaviour
         GameObject newCharacter = Instantiate(characterSkinItem.Prefab, position, rotation);
         CurrentCharacter = newCharacter.GetComponent<vThirdPersonController>();
         
+        if (YG2.envir.isMobile && !isFirstSpawn)
+        {
+            InvectorCharacterLinks invectorCharacterLinks = newCharacter.GetComponent<InvectorCharacterLinks>();
+            invectorCharacterLinks.MobileUI.SetActive(false);
+        }
+        
         vThirdPersonInput input = newCharacter.GetComponent<vThirdPersonInput>();
         input.unlockCursorOnStart = YG2.envir.isMobile || !isFirstSpawn;
         input.showCursorOnStart = YG2.envir.isMobile || !isFirstSpawn;

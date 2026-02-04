@@ -15669,7 +15669,7 @@ MonoBehaviour:
   - {fileID: 4790530894589872779, guid: 5b0777ad90098d44a89d4f550703ebf4, type: 3}
   _bossPrefabs: []
   _enemyParent: {fileID: 446130582}
-  _spawnCooldown: 2
+  _spawnCooldown: 4
   _bossSpawnRate: 0
 --- !u!4 &1789783269
 Transform:
