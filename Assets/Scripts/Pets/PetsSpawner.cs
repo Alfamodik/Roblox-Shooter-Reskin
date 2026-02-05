@@ -17,8 +17,10 @@ public class PetsSpawner : MonoBehaviour
 
     public void Initialize(IPersistentData iPersistentData)
     {
+        print("PetsSpawner start Initialize");
         _iPersistentData = iPersistentData;
         SpawnPets();
+        print("PetsSpawner end Initialize");
     }
 
     public void SpawnPet(PetSkinItem petSkinItem)

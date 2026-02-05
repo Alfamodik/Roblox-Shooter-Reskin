@@ -9,11 +9,13 @@ public class DeleteAfterWatchAds : MonoBehaviour
 
     public void Initialize(INotifyingOfWeaponAdvertisement notifier)
     {
+        print("DeleteAfterWatchAds start Initialize");
         if (notifier.WeaponIndex == _weaponIndex)
         {
             _notifier = notifier;
             _notifier.WeaponAvailable += DeleteGameObject;
         }
+        print("DeleteAfterWatchAds end Initialize");
     }
 
     private void OnDestroy()

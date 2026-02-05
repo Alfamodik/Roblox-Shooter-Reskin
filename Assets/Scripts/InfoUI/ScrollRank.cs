@@ -25,10 +25,12 @@ public class ScrollRank : NeedOfRankNotifier
 
     public override void Initialize(IRankNotifier rankNotifier)
     {
+        print("ScrollRank start Initialize");
         base.Initialize(rankNotifier);
 
         _scrollRect = GetComponent<ScrollRect>();
         RankNotifier.OnRankUpgraded += WaveDeactivated;
+        print("ScrollRank end Initialize");
     }
 
     private void OnDestroy()

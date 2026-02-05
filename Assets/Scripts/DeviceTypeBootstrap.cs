@@ -7,6 +7,7 @@ public class DeviceTypeBootstrap : MonoBehaviour
 
     private void Start()
     {
+        print("DeviceTypeBootstrap start Start");
         if(YG2.envir.isDesktop)
         {
             _desktopUI.SetActive(true);
@@ -15,5 +16,6 @@ public class DeviceTypeBootstrap : MonoBehaviour
         {
             _desktopUI.SetActive(false);
         }
+        print("DeviceTypeBootstrap end Start");
     }
 }

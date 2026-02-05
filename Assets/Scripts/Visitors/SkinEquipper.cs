@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Runtime.InteropServices;
+using UnityEngine;
 
 public class SkinEquipper : IShopItemVisitor
 {
@@ -49,7 +51,11 @@ public class SkinEquipper : IShopItemVisitor
         //Visit((dynamic)shopItem);
     }
 
-    public void Visit(CharacterSkinItem characterSkinItem) => _characterSkinChanger.Set(characterSkinItem);
+    public void Visit(CharacterSkinItem characterSkinItem)
+    {
+        Debug.Log($"public void Visit(CharacterSkinItem characterSkinItem); characterSkinItem={characterSkinItem};");
+        _characterSkinChanger.Set(characterSkinItem);
+    }
 
     public void Visit(MazeSkinItem mazeSkinItem) => throw new NotImplementedException();
 

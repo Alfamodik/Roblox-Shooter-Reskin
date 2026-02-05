@@ -41,6 +41,7 @@ public class MainGameplayBootstrap : MonoBehaviour
 
     private void Awake()
     {
+        print("MainGameplayBootstrap start awake");
         if(PlayerPrefs.GetString("version", "") != _currentVersion)
             DeleteAllPrefs();
 
@@ -63,12 +64,16 @@ public class MainGameplayBootstrap : MonoBehaviour
 
         _waveController.WaveDeactivated += WaveDeactivated;
         _rankCounter.RankUpgraded += PlayWinSound;
+
+        print("MainGameplayBootstrap end awake");
     }
 
     private void Start()
     {
+        print("MainGameplayBootstrap start Start");
         //GP_Game.GameReady();
         //GP_Game.GameplayStart();
+        print("MainGameplayBootstrap end Start");
     }
 
     private void OnDestroy() => DisposeHandler.DisposeAll();
@@ -98,6 +103,7 @@ public class MainGameplayBootstrap : MonoBehaviour
 
     private void Initialize()
     {
+        print("MainGameplayBootstrap start Initialize");
         if(!YG2.envir.isDesktop)
         {
             _enemySpawner.Initialize(_enemylist, _mobileInstanceLimit);
@@ -109,7 +115,6 @@ public class MainGameplayBootstrap : MonoBehaviour
             print($"instanceLimit = {_desktopInstanceLimit}");
         }
 
-
         _waveController.Initialize(_enemySpawner, _rankUpgradeCondtion); //first
         _UIKilledEnemy.Initialize(_rankUpgradeCondtion);
 
@@ -118,5 +123,6 @@ public class MainGameplayBootstrap : MonoBehaviour
 
         _rankUpgradeCondtion.Invoke();
         _waveController.StartWork();
+        print("MainGameplayBootstrap end Initialize");
     }
 }

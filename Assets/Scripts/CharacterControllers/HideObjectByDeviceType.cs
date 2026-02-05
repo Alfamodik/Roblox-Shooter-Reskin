@@ -7,7 +7,9 @@ public class HideObjectByDeviceType : MonoBehaviour
 
     void Start()
     {
-        //if (envir.device == _deviceType) zxc
-            gameObject.SetActive(false);
+        print("HideObjectByDeviceType start Start");
+        /*if (envir.device == _deviceType)
+            gameObject.SetActive(false);*/
+        print("HideObjectByDeviceType end Start");
     }
 }

@@ -13,6 +13,7 @@ public class ShopBootstrap : MonoBehaviour
 
     public void InitializeShop(IPersistentData persistentData, IDataProvider dataCloudProvider)
     {
+        print("ShopBootstrap start InitializeShop");
         _skinUnlocker = new SkinUnlocker(persistentData);
 
         OpenSkinsChecker openSkinsChecker = new OpenSkinsChecker(persistentData);
@@ -23,5 +24,6 @@ public class ShopBootstrap : MonoBehaviour
 
         _shop.Initialize(dataCloudProvider, openSkinsChecker, selectedSkinChecker, skinSelector, _skinUnlocker, _characterSkinChanger);
         YG2.ConsumePurchases();
+        print("ShopBootstrap end InitializeShop");
     }
 }

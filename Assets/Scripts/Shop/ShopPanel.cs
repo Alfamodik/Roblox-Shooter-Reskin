@@ -18,8 +18,10 @@ public class ShopPanel : MonoBehaviour
 
     public void Initialize(OpenSkinsChecker openSkinsChecker, SelectedSkinChecker selectedSkinChecker)
     {
+        print("ShopPanel start Initialize");
         _openSkinsChecker = openSkinsChecker;
         _selectedSkinChecker = selectedSkinChecker;
+        print("ShopPanel end Initialize");
     }
 
     public void Show(IEnumerable<ShopItem> items, bool loadCurrency = true)

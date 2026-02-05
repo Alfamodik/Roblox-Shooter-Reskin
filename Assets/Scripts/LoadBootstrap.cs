@@ -11,6 +11,7 @@ public class LoadBootstrap : MonoBehaviour
 
     private void Awake()
     {
+        print("LoadBootstrap start Awake");
         if(_audioSource != null)
         {
             float audioVolume = _audioSource.volume;
@@ -23,5 +24,6 @@ public class LoadBootstrap : MonoBehaviour
             _canvasGroup.alpha = 1;
             FadingOf.ChangeFading(_canvasGroup, 0, _fadeDuration);
         }
+        print("LoadBootstrap end Awake");
     }
 }

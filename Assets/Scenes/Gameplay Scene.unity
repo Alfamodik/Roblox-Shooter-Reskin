@@ -3335,7 +3335,7 @@ MonoBehaviour:
   BalanceChanged:
     m_PersistentCalls:
       m_Calls: []
-  _setDefaultSavesOnAwake: 1
+  _setDefaultSavesOnAwake: 0
 --- !u!4 &426411099
 Transform:
   m_ObjectHideFlags: 0

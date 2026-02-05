@@ -18,6 +18,7 @@ public class ActivateButtonAtRank : NeedOfRankNotifier, IDisposable
 
     public override void Initialize(IRankNotifier rankNotifier)
     {
+        print("ActivateButtonAtRank start Initialize");
         base.Initialize(rankNotifier);
 
         _button = GetComponent<Button>();
@@ -30,6 +31,7 @@ public class ActivateButtonAtRank : NeedOfRankNotifier, IDisposable
         RankNotifier.OnRankUpgraded += TryActivate;
 
         DisposeHandler.Add(this);
+        print("ActivateButtonAtRank end Initialize");
     }
 
     public void Dispose() => RankNotifier.OnRankUpgraded -= TryActivate;

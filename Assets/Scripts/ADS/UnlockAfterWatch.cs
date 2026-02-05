@@ -23,6 +23,7 @@ public class UnlockAfterWatch : MonoBehaviour, INotifyingOfWeaponAdvertisement
 
     public void Initialize(EqipWeapon eqipWeapon)
     {
+        print("UnlockAfterWatch start Initialize");
         _eqipWeapon = eqipWeapon;
         _button = GetComponent<Button>();
 
@@ -50,6 +51,7 @@ public class UnlockAfterWatch : MonoBehaviour, INotifyingOfWeaponAdvertisement
         }
 
         SetLitener(false);
+        print("UnlockAfterWatch end Initialize");
     }
 
     private void OnClick()

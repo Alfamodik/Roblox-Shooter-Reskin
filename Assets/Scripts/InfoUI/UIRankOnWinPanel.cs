@@ -11,11 +11,13 @@ public class UIRankOnWinPanel : MonoBehaviour
 
     public void Initialize(IRankNotifier rankNotifier)
     {
+        print("UIRankOnWinPanel start Initialize");
         _scoreViueOnWinPanel = GetComponent<TMP_Text>();
         _startText = _scoreViueOnWinPanel.text;
 
         _rankNotifier = rankNotifier;
         _rankNotifier.OnRankUpgraded += OnRankUpgraded;
+        print("UIRankOnWinPanel end Initialize");
     }
 
     private void OnRankUpgraded(int rank) => _scoreViueOnWinPanel.text = _startText + rank;

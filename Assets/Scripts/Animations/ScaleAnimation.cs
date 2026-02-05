@@ -12,10 +12,15 @@ public class ScaleAnimation : MonoBehaviour
     [SerializeField] private Ease _ease;
 
 
-    private void Start() => _target
+    private void Start()
+    {
+        print("ScaleAnimation start Start");
+        _target
             .DOScale(_to, _duration)
             .From(_from)
             .SetEase(_ease)
             .SetLoops(-1, LoopType.Yoyo)
             .SetRelative();
+        print("ScaleAnimation end Start");
+    }
 }

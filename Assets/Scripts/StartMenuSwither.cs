@@ -20,16 +20,20 @@ public class StartMenuSwither : MonoBehaviour
 
     private void Start()
     {
+        print("StartMenuSwither start Start");
         _playButton.onClick.AddListener(Deactivate);
 
         if(_activateOnStart)
             StartCoroutine(Initialize());
+        print("StartMenuSwither end Start");
     }
 
     private IEnumerator Initialize()
     {
+        print("StartMenuSwither start Initialize");
         yield return new WaitForSeconds(_delayTime);
         Activate();
+        print("StartMenuSwither end Initialize");
     }
 
     public void Deactivate()

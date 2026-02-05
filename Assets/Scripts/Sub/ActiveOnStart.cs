@@ -7,10 +7,12 @@ public class ActiveOnStart : MonoBehaviour
 
     private void Awake()
     {
+        print("ActiveOnStart start Awake");
         if (_target != null)
             _target.SetActive(_enabled);
 
         else
             gameObject.SetActive(_enabled);
+        print("ActiveOnStart end Awake");
     }
 }

@@ -26,6 +26,7 @@ public class UIKilledEnemy : MonoBehaviour
 
     public void Initialize(IScoreNotifier scoreNotifier)
     {
+        print("UIKilledEnemy start Initialize");
         _TMP_Text = GetComponent<TMP_Text>();
         _rectTransform = GetComponent<RectTransform>();
 
@@ -36,6 +37,7 @@ public class UIKilledEnemy : MonoBehaviour
         _startScale = _rectTransform.localScale;
 
         StartCoroutine(InitializeCoroutine());
+        print("UIKilledEnemy end Initialize");
     }
 
     private IEnumerator InitializeCoroutine()

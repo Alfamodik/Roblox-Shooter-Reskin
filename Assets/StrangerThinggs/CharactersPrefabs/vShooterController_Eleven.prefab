@@ -40275,7 +40275,7 @@ MonoBehaviour:
   behindTargetSmoothRotation: 1
   lockCamera: 0
   offsetMouse: {x: 0, y: 0}
-  indexList: 0
+  indexList: 4
   indexLookPoint: 0
   offSetPlayerPivot: 0
   distance: 5
@@ -51966,7 +51966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 0
+  selectedToolbar: 1
   unlockCursorOnStart: 0
   showCursorOnStart: 0
   toggleWalk: 0
@@ -52298,7 +52298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 3
+  selectedToolbar: 9
   canUseMeleeBlock_H: 0
   canUseMeleeWeakAttack_H: 1
   canUseMeleeStrongAttack_H: 1
@@ -72740,6 +72740,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 95.761
       objectReference: {fileID: 0}
+    - target: {fileID: 11429992, guid: 0aa8a1542200b3f4a978ba11eeb1ec1b, type: 3}
+      propertyPath: selectedToolbar
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -72819,6 +72823,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 82.776
       objectReference: {fileID: 0}
+    - target: {fileID: 11470846, guid: a0ef3c70b27799d409935f45a6537bb0, type: 3}
+      propertyPath: selectedToolbar
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -72838,6 +72846,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 304917783511809415}
     m_Modifications:
+    - target: {fileID: 1821744541300892347, guid: 2cb548e5781e140459d7adfc863bbc28,
+        type: 3}
+      propertyPath: selectedToolbar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4858134016180550643, guid: 2cb548e5781e140459d7adfc863bbc28,
         type: 3}
       propertyPath: m_Name
@@ -73813,6 +73826,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 304917783511809415}
     m_Modifications:
+    - target: {fileID: 4961482210494301649, guid: 7fba88c6aa3d8e5478e3ab53cb2b9678,
+        type: 3}
+      propertyPath: selectedToolbar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5687639040768966105, guid: 7fba88c6aa3d8e5478e3ab53cb2b9678,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -73966,6 +73984,10 @@ PrefabInstance:
     - target: {fileID: 423916, guid: e53efed3927a7254aa010f9c6752223c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 94.567
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437668, guid: e53efed3927a7254aa010f9c6752223c, type: 3}
+      propertyPath: selectedToolbar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

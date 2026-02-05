@@ -24,9 +24,11 @@ public class EnemySpawner : MonoBehaviour
 
     public void Initialize(EnemyList enemyList, int instanceLimit)
     {
+        print("EnemySpawner start Initialize");
         _enemyList = enemyList;
         _instanceLimit = instanceLimit;
         //_factory = new EnemyFactory(_enemyPrefabs, _bossPrefabs);
+        print("EnemySpawner end Initialize");
     }
 
     public EnemyList EnemyList => _enemyList;
@@ -75,7 +77,7 @@ public class EnemySpawner : MonoBehaviour
                 if(instance.TryGetComponent(out IEnemy component))
                     _enemyList.Add(component);
                 else
-                    Debug.LogWarning($"Не удалось получить {nameof(IEnemy)}. Проверьте все элементы префабы на его наличие!");
+                    Debug.LogWarning($"пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ {nameof(IEnemy)}. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
             }
         }
     }

@@ -12,9 +12,11 @@ public class PersistentDataBootstrap : MonoBehaviour
 
     public void Awake()
     {
+        print("PersistentDataBootstrap start Awake");
         InitializeData();
         _shopBootstrap?.InitializeShop(_persistentPlayerData, _dataProvider);
         InitializeRelatedScripts();
+        print("PersistentDataBootstrap end Awake");
     }
 
     private void InitializeData()

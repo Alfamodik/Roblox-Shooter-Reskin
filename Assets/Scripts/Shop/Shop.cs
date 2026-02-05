@@ -103,6 +103,7 @@ public class Shop : MonoBehaviour
 
     public void Initialize(IDataProvider dataProvider, OpenSkinsChecker openSkinsChecker, SelectedSkinChecker selectedSkinChecker, SkinSelector skinSelector, SkinUnlocker skinUnlocker, CharacterSkinChanger characterSkinChanger)
     {
+        print("Shop start Initialize");
         _selectedSkinChecker = selectedSkinChecker;
         _openSkinsChecker = openSkinsChecker;
         _skinSelector = skinSelector;
@@ -113,17 +114,22 @@ public class Shop : MonoBehaviour
         _skinFinder = new SkinFinder(_contentItems);
         
         _dataProvider = dataProvider;
-
+        
+        print("Shop _shopPanel.Initialize(openSkinsChecker, selectedSkinChecker);");
         _shopPanel.Initialize(openSkinsChecker, selectedSkinChecker);
 
         YG2.onRewardAdv += GiveSkinByCode;
         YG2.onPurchaseSuccess += GiveSkinByCode;
 
-        _shopPanel.ItemViewClicked += OnItemViewClicked;
+        print("Shop start _closeButton.onClick.AddListener(Close);");
         _closeButton.onClick.AddListener(Close);
+        print("Shop end _closeButton.onClick.AddListener(Close);");
+
+        _shopPanel.ItemViewClicked += OnItemViewClicked;
         CharacterSkinChanger.CharacterChanged += UpdateShopButtonLink;
 
         LoadSelectedSkins();
+        print("Shop end Initialize");
     }
     
     private void UpdateShopButtonLink(vThirdPersonInput item)
@@ -166,23 +172,39 @@ public class Shop : MonoBehaviour
 
     private void LoadSelectedSkins()
     {
+        print("Shop start LoadSelectedSkins");
+
+        print("Shop _contentItems.CharacterSkinItems.FirstOrDefault");
         CharacterSkinItem selectedCharacter = _contentItems.CharacterSkinItems.FirstOrDefault(item =>
         {
+            print($"Shop _selectedSkinChecker.Visit(item); item={item}");
             _selectedSkinChecker.Visit(item);
+            print($"Shop return _selectedSkinChecker.IsSelected;");
             return _selectedSkinChecker.IsSelected;
         });
 
         if (selectedCharacter != null)
+        {
+            print($"Shop _skinEquipper.Visit(selectedCharacter); selectedCharacter={selectedCharacter}; _skinEquipper={_skinEquipper}");
             _skinEquipper.Visit(selectedCharacter);
+        }
 
+        print($"Shop _contentItems.WeaponSkinItems.FirstOrDefault");
         WeaponSkinItem selectedWeapon = _contentItems.WeaponSkinItems.FirstOrDefault(item =>
         {
+            print($"Shop _selectedSkinChecker.Visit(item);");
             _selectedSkinChecker.Visit(item);
+            print($"Shop return _selectedSkinChecker.IsSelected;");
             return _selectedSkinChecker.IsSelected;
         });
 
         if (selectedWeapon != null)
+        {
+            print($"Shop _skinEquipper.Visit(selectedWeapon);");
             _skinEquipper.Visit(selectedWeapon);
+        }
+
+        print("Shop end LoadSelectedSkins");
     }
 
 

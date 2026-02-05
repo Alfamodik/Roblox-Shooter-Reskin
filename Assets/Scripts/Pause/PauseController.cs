@@ -14,10 +14,12 @@ public class PauseController : MonoBehaviour
 
     private void Awake()
     {
+        print("PauseController start Awake");
         foreach (var item in _audioSources)
             GlobalAudio.AddSource(item);
         
         CharacterSkinChanger.CharacterChanged += OnCharacterChanged;
+        print("PauseController end Awake");
     }
 
     private void OnDestroy()

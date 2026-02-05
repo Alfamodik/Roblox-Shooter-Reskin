@@ -26938,7 +26938,7 @@ MonoBehaviour:
   behindTargetSmoothRotation: 1
   lockCamera: 0
   offsetMouse: {x: 0, y: 0}
-  indexList: 0
+  indexList: 4
   indexLookPoint: 0
   offSetPlayerPivot: 0
   distance: 5

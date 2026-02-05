@@ -11,10 +11,12 @@ public class WaveController : MonoBehaviour
 
     public void Initialize(EnemySpawner enemySpawner, IRankNotifier rankNotifier)
     {
+        print("WaveController start Initialize");
         _enemySpawner = enemySpawner;
         _rankNotifier = rankNotifier;
 
         //_rankNotifier.OnRankUpgraded += CooldownWave;
+        print("WaveController end Initialize");
     }
 
     public void StartWork()

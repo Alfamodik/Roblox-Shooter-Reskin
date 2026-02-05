@@ -14,8 +14,10 @@ public class UiCurrentRank : NeedOfRankNotifier
 
     public override void Initialize(IRankNotifier rankNotifier)
     {
+        print("UiCurrentRank start Initialize");
         base.Initialize(rankNotifier);
         RankNotifier.OnRankUpgraded += OnRankUpgraded;
+        print("UiCurrentRank end Initialize");
     }
 
     private void OnDestroy()

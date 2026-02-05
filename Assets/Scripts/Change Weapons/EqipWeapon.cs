@@ -30,6 +30,7 @@ public class EqipWeapon : MonoBehaviour
 
     public void Initialize()
     {
+        print("EqipWeapon start Initialize");
         string savedWeapon = PlayerPrefs.GetString(CurrentWeaponKey);
         print($"Current weapon = {savedWeapon}");
 
@@ -41,6 +42,7 @@ public class EqipWeapon : MonoBehaviour
 
         _curentWeapon = (Weapons)Enum.Parse(typeof(Weapons), savedWeapon);
         SetWeapon(_curentWeapon, AmmoID.ShotGun);
+        print("EqipWeapon end Initialize");
     }
 
     public void SetShotGun() => SetWeapon(Weapons.Shotgun, AmmoID.ShotGun);

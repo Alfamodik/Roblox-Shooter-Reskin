@@ -9,10 +9,12 @@ public class ActivateObjectAtRunk : MonoBehaviour
 
     public void Initialize(IRankNotifier rankNotifier)
     {
+        print("ActivateObjectAtRunk start Initialize");
         _rankNotifier = rankNotifier;
         _rankNotifier.OnRankUpgraded += TryActivate;
 
         _target.SetActive(false);
+        print("ActivateObjectAtRunk end Initialize");
     }
 
     private void TryActivate(int runk)

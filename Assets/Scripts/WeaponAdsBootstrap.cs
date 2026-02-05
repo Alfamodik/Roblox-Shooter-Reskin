@@ -9,10 +9,16 @@ public class WeaponAdsBootstrap : MonoBehaviour
     [SerializeField] private List<UnlockAfterWatch> _unlockAfterWatcheList;
     [SerializeField] private List<DeleteAfterWatchAds> _deleteAfterWatchAdsList;
 
-    private void Start() => StartCoroutine(Initialize());
+    private void Start() 
+    {
+        print("WeaponAdsBootstrap start Start");
+        StartCoroutine(Initialize());
+        print("WeaponAdsBootstrap end Start");
+    }
 
     private IEnumerator Initialize()
     {
+        print("WeaponAdsBootstrap start Initialize");
         yield return null;
 
         _eqipWeapon.Initialize();
@@ -27,5 +33,6 @@ public class WeaponAdsBootstrap : MonoBehaviour
         {
             unlockAfterWatch.Initialize(_eqipWeapon);
         }
+        print("WeaponAdsBootstrap end Initialize");
     }
 }
