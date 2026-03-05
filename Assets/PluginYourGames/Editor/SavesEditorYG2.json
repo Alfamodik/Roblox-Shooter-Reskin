@@ -1,37 +1,37 @@
 {
-    "packedWeaponBayStates": 0,
-    "intExample": 5,
-    "strExample": "Hello!",
-    "boolExample": [
-        false,
-        false,
-        false,
-        false
-    ],
-    "idSave": 1301,
-    "SkinsDataInitialized": true,
-    "SelectedCharacterSkin": 2,
-    "SelectedMazeSkin": 0,
-    "SelectedToolSkin": 0,
-    "SelectedPetSkin": 0,
-    "SelectedWeaponSkin": 1,
-    "OpenCharacterSkins": [
-        1,
-        2
-    ],
-    "OpenMazeSkins": [
-        0
-    ],
-    "OpenToolSkins": [
-        0
-    ],
-    "OpenPetSkins": [],
-    "OpenWeaponSkins": [
-        0,
-        2,
-        4,
-        1
-    ],
-    "СurrentToolId": 0,
-    "Balance": 4800
+  "packedWeaponBayStates": 0,
+  "intExample": 5,
+  "strExample": "Hello!",
+  "boolExample": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "idSave": 1317,
+  "SkinsDataInitialized": true,
+  "SelectedCharacterSkin": 1,
+  "SelectedMazeSkin": 0,
+  "SelectedToolSkin": 0,
+  "SelectedPetSkin": 0,
+  "SelectedWeaponSkin": 0,
+  "OpenCharacterSkins": [
+    1,
+    2
+  ],
+  "OpenMazeSkins": [
+    0
+  ],
+  "OpenToolSkins": [
+    0
+  ],
+  "OpenPetSkins": [],
+  "OpenWeaponSkins": [
+    0,
+    2,
+    4,
+    1
+  ],
+  "СurrentToolId": 0,
+  "Balance": 5500
 }
